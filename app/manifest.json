@@ -1,0 +1,1 @@
+{"name": "Neurapse", "short_name": "Neurapse", "start_url": "/app/", "scope": "/app/", "display": "standalone", "background_color": "#161133", "theme_color": "#161133", "lang": "pt-BR", "icons": [{"src": "/app/icone-512.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any"}]}
