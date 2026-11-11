@@ -39,7 +39,8 @@ input::placeholder{color:rgba(246,244,248,.5)}
 button{height:56px;border:0;border-radius:999px;background:var(--horizonte);color:var(--neblina);font-family:Manrope,sans-serif;font-weight:600;font-size:17px;cursor:pointer;box-shadow:0 10px 28px rgba(91,91,164,.5);display:flex;align-items:center;justify-content:center;gap:10px}
 button:hover{background:#6a6ab8}button:disabled{opacity:.6;cursor:default}
 .nota{font-size:13px;color:rgba(246,244,248,.65)}
-.ok{padding:16px;border-radius:16px;background:rgba(91,91,164,.35);border:1px solid var(--bruma);font-weight:500}
+.ok{padding:18px;border-radius:18px;background:rgba(91,91,164,.35);border:1px solid var(--bruma)}
+.ok .grupo{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 22px;border-radius:999px;background:#25D366;color:#0b3d1f;font-family:Manrope,sans-serif;font-weight:700;text-decoration:none}
 .erro{color:#E07A5F;font-size:14px}
 section{padding:48px 0}
 section h2{font-weight:600;font-size:clamp(26px,3.4vw,36px);margin-bottom:28px}
@@ -94,7 +95,8 @@ section h2{font-weight:600;font-size:clamp(26px,3.4vw,36px);margin-bottom:28px}
 <div>O Neurapse apoia sua saúde mental e não substitui acompanhamento médico ou psicológico. Em crise, ligue 188 (CVV, grátis, 24 horas) ou 192 (SAMU).</div>
 <div class="links"><a href="./">Início</a><a href="termos.html">Termos de uso</a><a href="privacidade.html">Política de privacidade</a></div>
 </div></footer><script>
-const URL_LISTA='https://egxheohyfutdzkiqadkv.supabase.co/rest/v1/lista_espera',CHAVE='sb_publishable_sPo9z1Il6dQ-CZd60kRMzw_GOl3tI8-';
+const URL_LISTA='https://egxheohyfutdzkiqadkv.supabase.co/rest/v1/lista_espera',CHAVE='sb_publishable_sPo9z1Il6dQ-CZd60kRMzw_GOl3tI8-',GRUPO='https://chat.whatsapp.com/Bgn75PV75AzBZMCa6S7Mt5';
+function sucesso(f,titulo){f.outerHTML='<div class="ok"><strong>'+titulo+'</strong><p style="margin:8px 0 14px">Agora entre no grupo da lista de espera. É lá que sai a pré-venda Fundador primeiro.</p><a class="grupo" href="'+GRUPO+'" target="_blank" rel="noopener">Entrar no grupo do WhatsApp →</a></div>';setTimeout(()=>{location.href=GRUPO},2500)}
 document.querySelectorAll('form[data-lista]').forEach(f=>f.addEventListener('submit',async e=>{
   e.preventDefault();const b=f.querySelector('button'),msg=f.querySelector('.erro');msg.textContent='';
   const email=f.email.value.trim().toLowerCase(),nome=f.nome?f.nome.value.trim():null,tema=f.tema?f.tema.value:null;
@@ -102,8 +104,8 @@ document.querySelectorAll('form[data-lista]').forEach(f=>f.addEventListener('sub
   b.disabled=true;b.textContent='Enviando...';
   const origem=new URLSearchParams(location.search).get('utm_source')||document.referrer||'direto';
   try{const r=await fetch(URL_LISTA,{method:'POST',headers:{apikey:CHAVE,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({email,nome:nome||null,tema:tema||null,origem:origem.slice(0,80)})});
-    if(r.ok||r.status===409){f.outerHTML='<div class="ok">Pronto. Você está na lista. Avisamos por e-mail quando abrir a pré-venda.</div>'}
-    else{const t=await r.text();if(t.includes('duplicate')){f.outerHTML='<div class="ok">Você já está na lista. Avisamos por e-mail.</div>'}else throw 0}
+    if(r.ok||r.status===409){sucesso(f,'Pronto, você está na lista!')}
+    else{const t=await r.text();if(t.includes('duplicate')){sucesso(f,'Você já está na lista.')}else throw 0}
   }catch(_){b.disabled=false;b.textContent='Quero entrar na lista';msg.textContent='Não deu certo agora. Tente de novo.'}
 }));
 </script></body></html>
