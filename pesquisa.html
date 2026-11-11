@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pesquisa do teste · Neurapse</title><meta name="robots" content="noindex"><meta name="description" content="Conte como foram os seus 7 dias com o Neurapse.">
+<meta property="og:title" content="Pesquisa do teste · Neurapse"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta name="theme-color" content="#161133"><meta property="og:description" content="Conte como foram os seus 7 dias com o Neurapse.">
+<link rel="icon" href="favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@300;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--fundo:#161133;--indigo:#3A306F;--horizonte:#5B5BA4;--bruma:#BEA9D6;--neblina:#F6F4F8}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--neblina);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:linear-gradient(180deg,#161133 0%,#2A2160 40%,#161133 100%);min-height:100vh;overflow-x:hidden}
+a{color:var(--bruma)}
+h1,h2,h3{font-family:Manrope,Inter,sans-serif;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.particulas{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.particulas i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:9px;background:var(--bruma);opacity:0;animation:sobe linear infinite}
+@keyframes sobe{0%{transform:translateY(0);opacity:0}10%{opacity:.55}90%{opacity:.55}100%{transform:translateY(-110vh) translateX(14px);opacity:0}}
+main{position:relative;z-index:1}
+footer{position:relative;z-index:1;border-top:1px solid rgba(190,169,214,.15);margin-top:40px;padding:36px 0 44px;font-size:14px;line-height:1.6;color:rgba(246,244,248,.7)}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0}
+footer .empresa{font-size:13px;color:rgba(246,244,248,.5)}
+@media (prefers-reduced-motion:reduce){.particulas,.halo,.simbolo-grande{animation:none!important}}
+
+.topo{position:sticky;top:0;z-index:5;background:rgba(22,17,51,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(190,169,214,.1)}
+.topo .wrap{display:flex;align-items:center;gap:10px;height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.marca svg{width:28px;height:28px}
+.marca span{font-family:Manrope,sans-serif;font-weight:500;font-size:19px;letter-spacing:.5px}
+.menu{display:flex;gap:22px;margin-left:auto;align-items:center}
+.menu a{color:rgba(246,244,248,.78);text-decoration:none;font-size:15px}
+.menu a:hover{color:var(--neblina)}
+.menu .cta{color:var(--neblina);background:var(--horizonte);padding:10px 18px;border-radius:999px;font-family:Manrope,sans-serif;font-weight:600}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:64px 0 40px}
+.selo{display:inline-block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bruma);margin-bottom:18px}
+.hero h1{font-weight:600;font-size:clamp(38px,5.6vw,62px);line-height:1.05;letter-spacing:-1px}
+.hero p.sub{font-size:19px;line-height:1.6;color:rgba(246,244,248,.82);margin:22px 0 30px;max-width:540px}
+.acoes{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 26px;border-radius:999px;font-family:Manrope,sans-serif;font-weight:600;font-size:17px;text-decoration:none;color:var(--neblina);background:var(--horizonte);box-shadow:0 10px 28px rgba(91,91,164,.45)}
+.btn:hover{background:#6a6ab8}
+.btn.vazado{background:transparent;border:1.5px solid rgba(190,169,214,.45);box-shadow:none}
+.btn.vazado:hover{background:rgba(190,169,214,.08)}
+.celular{position:relative;width:min(320px,100%);margin:0 auto;aspect-ratio:9/18.5;border-radius:44px;padding:12px;background:linear-gradient(160deg,#3A306F,#1d1744);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 0 0 1.5px rgba(190,169,214,.25)}
+.tela{position:relative;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#221a4f 0%,#161133 100%);padding:46px 18px 18px;display:flex;flex-direction:column;gap:14px}
+.tela .ola{font-family:Manrope,sans-serif;font-size:21px;font-weight:600}
+.tela .pergunta{font-size:14px;color:rgba(246,244,248,.75);margin-top:-6px}
+.humores{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.humor{height:42px;border-radius:14px;border:1px solid rgba(190,169,214,.25);background:rgba(58,48,111,.55);color:var(--neblina);font:500 13px Inter,sans-serif;cursor:pointer;padding:0}
+.humor[aria-pressed=true]{background:rgba(91,91,164,.75);border-color:var(--bruma)}
+.sugestao{border-radius:20px;padding:16px;background:rgba(58,48,111,.6);border:1px solid rgba(190,169,214,.2);display:flex;flex-direction:column;gap:8px;transition:opacity .4s}
+.sugestao small{color:var(--bruma);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.sugestao strong{font-family:Manrope,sans-serif;font-size:16px}
+.sugestao p{margin:0;font-size:13.5px;line-height:1.5;color:rgba(246,244,248,.8)}
+.sugestao .tocar{align-self:flex-start;margin-top:4px;font:600 13px Manrope,sans-serif;background:var(--horizonte);border-radius:999px;padding:9px 16px}
+.mini-halo{position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.35),rgba(91,91,164,.1) 50%,transparent 70%);animation:respira 11s ease-in-out infinite;pointer-events:none}
+@keyframes respira{0%,100%{transform:scale(.86);opacity:.6}50%{transform:scale(1.08);opacity:1}}
+@keyframes gira{to{transform:rotate(360deg)}}
+section{padding:72px 0;position:relative}
+.rotulo{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bruma);margin-bottom:12px}
+section h2{font-weight:600;font-size:clamp(28px,3.8vw,42px);line-height:1.12;letter-spacing:-.5px;max-width:720px}
+section .intro{font-size:18px;line-height:1.6;color:rgba(246,244,248,.78);max-width:640px;margin:16px 0 36px}
+.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grade.dois{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:24px;border-radius:22px;background:rgba(58,48,111,.42);border:1px solid rgba(190,169,214,.14)}
+.card h3{font-size:19px;font-weight:600;margin-bottom:10px}
+.card p{margin:0;color:rgba(246,244,248,.78);line-height:1.6;font-size:15.5px}
+.num{display:inline-flex;width:36px;height:36px;border-radius:999px;align-items:center;justify-content:center;background:rgba(190,169,214,.16);color:var(--bruma);font-weight:600;margin-bottom:14px}
+.temas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tema{padding:22px;border-radius:22px;background:linear-gradient(160deg,rgba(91,91,164,.35),rgba(58,48,111,.35));border:1px solid rgba(190,169,214,.18)}
+.tema h3{font-size:18px;margin-bottom:8px}
+.tema p{margin:0;font-size:15px;line-height:1.55;color:rgba(246,244,248,.78)}
+.destaque{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:44px;border-radius:32px;background:linear-gradient(135deg,rgba(190,169,214,.18),rgba(91,91,164,.28) 50%,rgba(58,48,111,.4));border:1px solid rgba(190,169,214,.25);overflow:hidden}
+.palco{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;max-width:340px;width:100%;margin:0 auto}
+.halo{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.4) 0%,rgba(91,91,164,.14) 45%,rgba(22,17,51,0) 70%);animation:respira 11s ease-in-out infinite}
+.simbolo-grande{width:56%;animation:gira 40s linear infinite}
+.simbolo-grande svg{width:100%;height:auto}
+.lista{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.lista li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.55;color:rgba(246,244,248,.86)}
+.lista li:before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:9px;background:var(--bruma)}
+.planos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:760px}
+.plano{padding:28px;border-radius:24px;background:rgba(58,48,111,.45);border:1px solid rgba(190,169,214,.18);display:flex;flex-direction:column;gap:6px}
+.plano.principal{border:2px solid var(--bruma);background:rgba(91,91,164,.32)}
+.plano .nome{font-family:Manrope,sans-serif;font-weight:600;font-size:18px}
+.plano .preco{font-family:Manrope,sans-serif;font-weight:700;font-size:34px;margin-top:6px}
+.plano .preco small{font-size:16px;font-weight:500;color:rgba(246,244,248,.7)}
+.plano .obs{color:rgba(246,244,248,.75);font-size:15px}
+.etiqueta{align-self:flex-start;font:600 12px Manrope,sans-serif;color:#161133;background:var(--bruma);padding:5px 10px;border-radius:999px;margin-bottom:6px}
+.linha-tempo{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 8px}
+.linha-tempo span{padding:10px 16px;border-radius:999px;background:rgba(58,48,111,.5);font-size:14.5px}
+.linha-tempo b{color:var(--bruma);font-weight:600;margin-right:6px}
+.pequeno{font-size:13.5px;color:rgba(246,244,248,.6);line-height:1.55;max-width:680px}
+.lista-espera{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:44px;border-radius:32px;background:rgba(58,48,111,.45);border:1px solid rgba(190,169,214,.2)}
+form{display:flex;flex-direction:column;gap:10px;width:100%}
+.linha{display:flex;gap:10px}
+.linha input{flex:1 1 0;width:auto}
+input,select{flex:none;width:100%;height:54px;border-radius:16px;border:1px solid rgba(190,169,214,.3);background:rgba(22,17,51,.55);color:var(--neblina);padding:0 16px;font:inherit;font-size:16px;min-width:0}
+input::placeholder{color:rgba(246,244,248,.5)}
+form button{height:56px;border:0;border-radius:999px;background:var(--horizonte);color:var(--neblina);font-family:Manrope,sans-serif;font-weight:600;font-size:17px;cursor:pointer;box-shadow:0 10px 28px rgba(91,91,164,.5)}
+form button:hover{background:#6a6ab8}form button:disabled{opacity:.6;cursor:default}
+.nota{font-size:13px;color:rgba(246,244,248,.65)}
+.ok{padding:20px;border-radius:18px;background:rgba(91,91,164,.35);border:1px solid var(--bruma)}
+.ok .grupo{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 22px;border-radius:999px;background:#25D366;color:#0b3d1f;font-family:Manrope,sans-serif;font-weight:700;text-decoration:none}
+.erro{color:#F2A08A;font-size:14px}
+.faq{max-width:780px;display:flex;flex-direction:column;gap:10px}
+.faq details{border-radius:18px;background:rgba(58,48,111,.42);border:1px solid rgba(190,169,214,.14);padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-family:Manrope,sans-serif;font-weight:600;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:0;top:16px;font-size:24px;color:var(--bruma);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;line-height:1.65;color:rgba(246,244,248,.8);font-size:15.5px}
+.crise{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:24px 28px;border-radius:22px;background:rgba(22,17,51,.6);border:1px solid rgba(190,169,214,.25)}
+.crise p{margin:0;flex:1 1 320px;line-height:1.6;color:rgba(246,244,248,.85)}
+.crise a{white-space:nowrap}
+.revela{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.revela.visivel{opacity:1;transform:none}
+@media (max-width:900px){.temas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){
+.menu a:not(.cta){display:none}
+.hero{grid-template-columns:1fr;padding:36px 0 20px;gap:36px}
+.celular{width:min(290px,100%)}
+.grade,.grade.dois,.planos{grid-template-columns:1fr}
+.destaque,.lista-espera{grid-template-columns:1fr;padding:28px 22px;gap:28px}
+.palco{max-width:240px}
+section{padding:52px 0}
+.linha{flex-direction:column}.linha input{flex:none;width:100%}
+}
+@media (max-width:480px){.temas{grid-template-columns:1fr}.btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.revela{opacity:1;transform:none;transition:none}.mini-halo,.halo,.simbolo-grande{animation:none}}
+
+body{overflow:hidden}
+footer{display:none}
+.pq{position:fixed;inset:0;display:flex;flex-direction:column;z-index:2}
+.pq-topo{display:flex;align-items:center;gap:14px;padding:18px 20px}
+.pq-topo .marca svg{width:26px;height:26px}
+.pq-barra{flex:1;height:6px;border-radius:99px;background:rgba(246,244,248,.12);overflow:hidden}
+.pq-barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,#5B5BA4,#BEA9D6);border-radius:99px;transition:width .6s ease}
+.pq-cont{font-size:13px;color:rgba(246,244,248,.6);min-width:46px;text-align:right}
+.pq-palco{flex:1;position:relative;overflow-y:auto;overflow-x:hidden}
+.pq-tela{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px 20px 40px;opacity:0;transform:translateY(30px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.pq-tela.ativa{opacity:1;transform:none;pointer-events:auto;position:relative;min-height:100%}
+.pq-tela.saindo{opacity:0;transform:translateY(-30px)}
+.pq-card{width:100%;max-width:640px}
+.pq-secao{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bruma);margin-bottom:12px}
+.pq-card h2{font-family:Manrope,sans-serif;font-weight:600;font-size:clamp(24px,3.6vw,34px);line-height:1.2;margin:0 0 10px}
+.pq-card .ajuda{color:rgba(246,244,248,.7);font-size:15.5px;line-height:1.55;margin:0 0 22px}
+.ops{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.op{display:flex;align-items:center;gap:14px;width:100%;min-height:56px;padding:12px 18px;border-radius:16px;border:1.5px solid rgba(190,169,214,.28);background:rgba(58,48,111,.45);color:var(--neblina);font:500 16px Inter,sans-serif;text-align:left;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+.op:hover{background:rgba(91,91,164,.4)}
+.op:active{transform:scale(.99)}
+.op .tecla{flex:none;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(190,169,214,.4);font-size:12px;color:var(--bruma)}
+.op[aria-pressed=true]{background:rgba(91,91,164,.7);border-color:var(--bruma)}
+.op[aria-pressed=true] .tecla{background:var(--bruma);color:#161133}
+.escala{display:grid;gap:8px;margin-top:18px}
+.escala.e11{grid-template-columns:repeat(11,minmax(0,1fr))}
+.escala.e5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.escala button{height:56px;border-radius:14px;border:1.5px solid rgba(190,169,214,.28);background:rgba(58,48,111,.45);color:var(--neblina);font:600 17px Manrope,sans-serif;cursor:pointer}
+.escala button[aria-pressed=true]{background:var(--horizonte);border-color:var(--bruma)}
+.extremos{display:flex;justify-content:space-between;margin-top:8px;font-size:13px;color:rgba(246,244,248,.6)}
+.pq-card input[type=text],.pq-card input[type=email],.pq-card textarea{width:100%;border:0;border-bottom:2px solid rgba(190,169,214,.4);background:transparent;color:var(--neblina);font:400 22px Inter,sans-serif;padding:12px 2px;outline:none;margin-top:10px}
+.pq-card textarea{min-height:120px;resize:vertical;font-size:18px;line-height:1.5}
+.pq-card input:focus,.pq-card textarea:focus{border-bottom-color:var(--bruma)}
+.pq-acoes{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap}
+.pq-ok{height:52px;padding:0 26px;border:0;border-radius:999px;background:var(--horizonte);color:var(--neblina);font:600 16px Manrope,sans-serif;cursor:pointer;box-shadow:0 10px 28px rgba(91,91,164,.45)}
+.pq-ok:disabled{opacity:.45;cursor:default;box-shadow:none}
+.pq-dica{font-size:13px;color:rgba(246,244,248,.5)}
+.pq-voltar{background:none;border:0;color:rgba(246,244,248,.65);font:500 15px Inter,sans-serif;cursor:pointer;padding:8px 0}
+.pq-erro{color:#F2A08A;font-size:14px;margin-top:10px;min-height:20px}
+.pq-inicio .simb{width:110px;margin-bottom:22px;animation:respiraS 11s ease-in-out infinite}
+@keyframes respiraS{0%,100%{transform:scale(.94)}50%{transform:scale(1.05)}}
+.pq-grupo{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 24px;border-radius:999px;background:#25D366;color:#0b3d1f;font:700 16px Manrope,sans-serif;text-decoration:none}
+@media (max-width:560px){.escala.e11{grid-template-columns:repeat(6,minmax(0,1fr))}.pq-dica{display:none}}
+</style></head>
+<body><div class="particulas" aria-hidden="true"><i style="left:0%;animation-duration:11s;animation-delay:0s"></i><i style="left:37%;animation-duration:18s;animation-delay:4s"></i><i style="left:74%;animation-duration:15s;animation-delay:8s"></i><i style="left:11%;animation-duration:12s;animation-delay:3s"></i><i style="left:48%;animation-duration:19s;animation-delay:7s"></i><i style="left:85%;animation-duration:16s;animation-delay:2s"></i><i style="left:22%;animation-duration:13s;animation-delay:6s"></i><i style="left:59%;animation-duration:20s;animation-delay:1s"></i><i style="left:96%;animation-duration:17s;animation-delay:5s"></i><i style="left:33%;animation-duration:14s;animation-delay:0s"></i><i style="left:70%;animation-duration:11s;animation-delay:4s"></i><i style="left:7%;animation-duration:18s;animation-delay:8s"></i><i style="left:44%;animation-duration:15s;animation-delay:3s"></i><i style="left:81%;animation-duration:12s;animation-delay:7s"></i><i style="left:18%;animation-duration:19s;animation-delay:2s"></i><i style="left:55%;animation-duration:16s;animation-delay:6s"></i><i style="left:92%;animation-duration:13s;animation-delay:1s"></i><i style="left:29%;animation-duration:20s;animation-delay:5s"></i></div><main><div class="pq">
+<div class="pq-topo"><a class="marca" href="./" aria-label="Neurapse"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></a><div class="pq-barra" aria-hidden="true"><i></i></div><span class="pq-cont"></span></div>
+<div class="pq-palco" id="palco"></div>
+</div></main><footer><div class="wrap">
+<div>O Neurapse apoia o seu bem-estar e não substitui acompanhamento médico ou psicológico. Em crise, ligue 188 (CVV, grátis, 24 horas) ou 192 (SAMU).</div>
+<div class="links"><a href="./">Início</a><a href="suporte.html">Suporte</a><a href="termos.html">Termos de uso</a><a href="privacidade.html">Política de privacidade</a><a href="https://www.instagram.com/neurapse.app/" target="_blank" rel="noopener" style="display:inline-flex;gap:6px;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@neurapse.app</a></div>
+<div class="empresa">NEURAPSE TECNOLOGIA INOVA SIMPLES (I.S.) · CNPJ 70.083.538/0001-92 · Florianópolis, SC</div>
+</div></footer><script>
+const P=[{"id": "email", "secao": "Sobre você", "titulo": "Qual é o e-mail que você usou no app?", "ajuda": "Assim a gente junta a sua opinião com o que você praticou. Seus dados ficam protegidos.", "tipo": "email"}, {"id": "nome", "secao": "Sobre você", "titulo": "E como podemos te chamar?", "tipo": "texto", "opcional": true}, {"id": "idade", "secao": "Sobre você", "titulo": "Qual é a sua idade?", "tipo": "uma", "ops": ["18 a 24", "25 a 34", "35 a 44", "45 a 54", "55 ou mais"]}, {"id": "genero", "secao": "Sobre você", "titulo": "Como você se identifica?", "tipo": "uma", "ops": ["Mulher", "Homem", "Não binário", "Prefiro não dizer"]}, {"id": "cidade", "secao": "Sobre você", "titulo": "Em qual cidade você mora?", "tipo": "texto", "opcional": true}, {"id": "outros_apps", "secao": "Sobre você", "titulo": "Você já usou algum destes apps?", "ajuda": "Pode marcar mais de um.", "tipo": "varias", "ops": ["Calm", "Headspace", "Lojong", "Zen", "Insight Timer", "Outro app de meditação ou bem-estar", "Nenhum"]}, {"id": "ja_pagou", "secao": "Sobre você", "titulo": "Você já pagou por algum app de bem-estar?", "tipo": "uma", "ops": ["Sim, pago hoje", "Já paguei, mas cancelei", "Nunca paguei"]}, {"id": "dias_praticou", "secao": "Sua experiência", "titulo": "Em quantos dos 7 dias você praticou?", "tipo": "uma", "ops": ["0 ou 1 dia", "2 ou 3 dias", "4 ou 5 dias", "6 ou 7 dias"]}, {"id": "mais_usou", "secao": "Sua experiência", "titulo": "O que você mais usou?", "ajuda": "Pode marcar mais de um.", "tipo": "varias", "ops": ["Check-in \"Como você está?\"", "Respiração 4-7-8", "Silêncio guiado", "Foco", "Começar agora", "Conversa com a IA", "Seu caminho", "Progresso e selos"]}, {"id": "sentiu_depois", "secao": "Sua experiência", "titulo": "Em geral, como você se sentiu depois das práticas?", "tipo": "escala5", "extremos": ["Pior", "Muito melhor"]}, {"id": "diferenca", "secao": "Sua experiência", "titulo": "Você notou alguma diferença no seu dia a dia nesses 7 dias?", "tipo": "uma", "ops": ["Nenhuma", "Pouca", "Alguma", "Muita"]}, {"id": "ia_ajudou", "secao": "Sua experiência", "titulo": "A conversa com a IA te ajudou?", "tipo": "uma", "ops": ["Ajudou muito", "Ajudou um pouco", "Não ajudou", "Não usei", "Não respondeu quando tentei"]}, {"id": "facilidade", "secao": "Sua experiência", "titulo": "O app foi fácil de usar?", "tipo": "escala5", "extremos": ["Muito difícil", "Muito fácil"]}, {"id": "gostou", "secao": "Sua experiência", "titulo": "O que você mais gostou?", "tipo": "longo", "opcional": true}, {"id": "faltou", "secao": "Sua experiência", "titulo": "O que te incomodou ou fez falta?", "tipo": "longo", "opcional": true}, {"id": "nps", "secao": "Valor", "titulo": "De 0 a 10, quanto você indicaria o Neurapse para um amigo?", "tipo": "escala11", "extremos": ["Nada provável", "Com certeza"]}, {"id": "sem_neurapse", "secao": "Valor", "titulo": "Como você se sentiria se não pudesse mais usar o Neurapse?", "tipo": "uma", "ops": ["Muito desapontado", "Um pouco desapontado", "Nada desapontado"]}, {"id": "assinaria", "secao": "Valor", "titulo": "Depois do teste grátis, você assinaria?", "ajuda": "Anual: R$ 179,90 (R$ 14,99 por mês). Mensal: R$ 29,90.", "tipo": "uma", "ops": ["Sim, o plano anual", "Sim, o plano mensal", "Só se fosse mais barato", "Não assinaria"]}, {"id": "preco_justo", "secao": "Valor", "titulo": "Qual seria um preço justo por mês?", "tipo": "uma", "ops": ["Até R$ 9,90", "De R$ 10 a R$ 19,90", "De R$ 20 a R$ 29,90", "De R$ 30 a R$ 39,90", "R$ 40 ou mais"]}, {"id": "preco_caro", "secao": "Valor", "titulo": "A partir de quanto por mês você acharia caro demais?", "tipo": "uma", "ops": ["R$ 10", "R$ 20", "R$ 30", "R$ 40", "R$ 50 ou mais"]}, {"id": "faria_assinar", "secao": "Valor", "titulo": "O que faria você assinar ou continuar usando?", "ajuda": "Pode marcar mais de um.", "tipo": "varias", "ops": ["Mais meditações e respirações", "IA mais presente no dia a dia", "Programas guiados por semanas", "Comunidade com outras pessoas", "Conteúdo para dormir", "Preço menor", "Plano para família ou casal"]}, {"id": "conversa", "secao": "Para fechar", "titulo": "Topa conversar 15 minutos com a gente sobre a sua experiência?", "tipo": "uma", "ops": ["Sim, podem me chamar", "Agora não"]}, {"id": "whatsapp", "secao": "Para fechar", "titulo": "Qual é o seu WhatsApp?", "ajuda": "Só usamos para combinar essa conversa.", "tipo": "texto", "opcional": true, "se": ["conversa", "Sim, podem me chamar"]}, {"id": "consentimento", "secao": "Para fechar", "titulo": "Podemos usar suas respostas para melhorar o Neurapse?", "ajuda": "Elas ficam guardadas com segurança e nunca são vendidas ou divulgadas com o seu nome.", "tipo": "uma", "ops": ["Sim, concordo", "Não"]}],URL_PQ='https://egxheohyfutdzkiqadkv.supabase.co/rest/v1/pesquisa_teste',CHAVE='sb_publishable_sPo9z1Il6dQ-CZd60kRMzw_GOl3tI8-',GRUPO='https://chat.whatsapp.com/Bgn75PV75AzBZMCa6S7Mt5',SVG="<svg viewBox=\"0 0 1500 1500\" aria-hidden=\"true\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"1\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"#BEA9D6\"/><stop offset=\"1\" stop-color=\"#F6F4F8\"/></linearGradient></defs><path fill=\"url(#g)\" d=\"M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z\"/></svg>";
+const r={};let i=-1;const palco=document.getElementById('palco');
+try{const e=localStorage.getItem('neurapse-email');if(e)r.email=e}catch(_){}
+const visiveis=()=>P.filter(p=>!p.se||r[p.se[0]]===p.se[1]);
+function barra(){const v=visiveis(),n=i<0?0:Math.min(i+1,v.length);document.querySelector('.pq-barra i').style.width=(n/v.length*100)+'%';document.querySelector('.pq-cont').textContent=i<0||i>=v.length?'':n+'/'+v.length}
+function trocar(html,foco){const velha=palco.querySelector('.pq-tela.ativa');const t=document.createElement('div');t.className='pq-tela';t.innerHTML='<div class="pq-card">'+html+'</div>';
+ if(velha){velha.classList.add('saindo');velha.classList.remove('ativa');setTimeout(()=>velha.remove(),450)}
+ palco.appendChild(t);void t.offsetWidth;t.classList.add('ativa');palco.scrollTop=0;if(foco){const f=t.querySelector('input,textarea');if(f&&matchMedia('(pointer:fine)').matches)setTimeout(()=>f.focus(),300)}barra();return t}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function inicio(){i=-1;trocar('<div class="pq-inicio"><div class="simb">'+SVG+'</div><div class="pq-secao">Pesquisa do teste</div><h2>Como foram os seus 7 dias com o Neurapse?</h2><p class="ajuda">São '+visiveis().length+' perguntas rápidas, leva uns 4 minutos. Não existe resposta certa: queremos a sua opinião sincera.</p><div class="pq-acoes"><button class="pq-ok" id="ok">Começar</button><span class="pq-dica">ou aperte Enter</span></div></div>').querySelector('#ok').onclick=proxima}
+function mostrar(){const v=visiveis();if(i>=v.length)return enviar();const p=v[i];let h='<div class="pq-secao">'+p.secao+'</div><h2>'+p.titulo+'</h2>'+(p.ajuda?'<p class="ajuda">'+p.ajuda+'</p>':'');
+ const val=r[p.id];
+ if(p.tipo==='uma'||p.tipo==='varias'){h+='<div class="ops">'+p.ops.map((o,k)=>'<button class="op" type="button" aria-pressed="'+(p.tipo==='uma'?val===o:(val||[]).includes(o))+'" data-v="'+esc(o)+'"><span class="tecla">'+String.fromCharCode(65+k)+'</span>'+esc(o)+'</button>').join('')+'</div>'}
+ else if(p.tipo==='escala5'||p.tipo==='escala11'){const n=p.tipo==='escala5'?[1,2,3,4,5]:[0,1,2,3,4,5,6,7,8,9,10];h+='<div class="escala '+(p.tipo==='escala5'?'e5':'e11')+'">'+n.map(x=>'<button type="button" aria-pressed="'+(val===x)+'" data-v="'+x+'">'+x+'</button>').join('')+'</div><div class="extremos"><span>'+p.extremos[0]+'</span><span>'+p.extremos[1]+'</span></div>'}
+ else if(p.tipo==='longo'){h+='<textarea maxlength="1500" placeholder="Escreva aqui...">'+esc(val||'')+'</textarea>'}
+ else{h+='<input type="'+(p.tipo==='email'?'email':'text')+'" maxlength="120" autocomplete="'+(p.tipo==='email'?'email':'off')+'" placeholder="Digite aqui..." value="'+esc(val||'')+'">'}
+ h+='<div class="pq-erro" role="alert"></div><div class="pq-acoes"><button class="pq-ok" id="ok">'+(i===v.length-1?'Enviar':'OK')+'</button>'+(p.opcional?'<button class="pq-voltar" id="pular">Pular</button>':'')+'<button class="pq-voltar" id="voltar">Voltar</button></div>';
+ const t=trocar(h,true),ok=t.querySelector('#ok');
+ const pronto=()=>{const x=r[p.id];ok.disabled=!p.opcional&&(x===undefined||x===''||(Array.isArray(x)&&!x.length))};
+ t.querySelectorAll('.op').forEach(b=>b.onclick=()=>{const o=b.dataset.v;if(p.tipo==='uma'){r[p.id]=o;t.querySelectorAll('.op').forEach(x=>x.setAttribute('aria-pressed',x===b));pronto();setTimeout(proxima,380)}else{let a=r[p.id]||[];if(o==='Nenhum')a=a.includes(o)?[]:[o];else{a=a.filter(x=>x!=='Nenhum');a=a.includes(o)?a.filter(x=>x!==o):[...a,o]}r[p.id]=a;t.querySelectorAll('.op').forEach(x=>x.setAttribute('aria-pressed',a.includes(x.dataset.v)));pronto()}});
+ t.querySelectorAll('.escala button').forEach(b=>b.onclick=()=>{r[p.id]=+b.dataset.v;t.querySelectorAll('.escala button').forEach(x=>x.setAttribute('aria-pressed',x===b));pronto();setTimeout(proxima,380)});
+ const campo=t.querySelector('input,textarea');if(campo)campo.oninput=()=>{r[p.id]=campo.value.trim();pronto()};
+ ok.onclick=()=>{if(p.tipo==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(r.email||'')){t.querySelector('.pq-erro').textContent='Confira o e-mail.';return}proxima()};
+ const pu=t.querySelector('#pular');if(pu)pu.onclick=()=>{delete r[p.id];proxima()};
+ t.querySelector('#voltar').onclick=()=>{i-=1;i<0?inicio():mostrar()};pronto()}
+function proxima(){i+=1;mostrar()}
+document.addEventListener('keydown',e=>{const t=palco.querySelector('.pq-tela.ativa');if(!t)return;
+ if(e.key==='Enter'&&!(e.target.tagName==='TEXTAREA'&&!e.metaKey&&!e.ctrlKey)){const ok=t.querySelector('#ok');if(ok&&!ok.disabled){e.preventDefault();ok.click()}return}
+ if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;
+ const k=e.key.toUpperCase().charCodeAt(0)-65,ops=t.querySelectorAll('.op');if(e.key.length===1&&ops[k])ops[k].click();
+ const n=parseInt(e.key,10),es=t.querySelectorAll('.escala button');if(!isNaN(n)&&es.length){const b=[...es].find(x=>x.dataset.v===String(n));if(b)b.click()}});
+async function enviar(){barra();const t=trocar('<div class="pq-secao">Enviando</div><h2>Guardando as suas respostas...</h2>');
+ const consent=r.consentimento==='Sim, concordo';const email=(r.email||'').toLowerCase()||null;
+ const dados=consent?Object.assign({},r):{consentimento:'Não'};
+ const origem=new URLSearchParams(location.search).get('utm_source')||'site';
+ try{const res=await fetch(URL_PQ,{method:'POST',headers:{apikey:CHAVE,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({email:consent?email:null,respostas:dados,origem})});if(!res.ok)throw 0;
+  trocar('<div class="pq-inicio"><div class="simb">'+SVG+'</div><div class="pq-secao">Pronto</div><h2>Obrigado'+(r.nome?', '+esc(r.nome):'')+'.</h2><p class="ajuda">As suas respostas chegaram. Você ajudou a construir o Neurapse que vai para as lojas, e a gente vai te avisar primeiro quando ele chegar.</p><div class="pq-acoes"><a class="pq-grupo" href="'+GRUPO+'" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a></div></div>');
+  document.querySelector('.pq-barra i').style.width='100%'}
+ catch(_){const x=trocar('<div class="pq-secao">Ops</div><h2>Não conseguimos enviar agora.</h2><p class="ajuda">Confira a internet e tente de novo. Suas respostas continuam aqui.</p><div class="pq-acoes"><button class="pq-ok" id="ok">Tentar de novo</button></div>');x.querySelector('#ok').onclick=enviar}}
+inicio();
+</script></body></html>
