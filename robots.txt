@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /app/
-Disallow: /teste.html
-Disallow: /pesquisa.html
-Sitemap: https://neurapse.com.br/sitemap.xml
