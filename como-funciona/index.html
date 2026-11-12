@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Como funciona | Neurapse</title><meta name="description" content="Você diz como está e o Neurapse cuida do próximo passo.">
+<meta property="og:title" content="Como funciona | Neurapse"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta name="theme-color" content="#161133"><meta property="og:description" content="Você diz como está e o Neurapse cuida do próximo passo.">
+<link rel="icon" href="/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@300;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--fundo:#161133;--indigo:#3A306F;--horizonte:#5B5BA4;--bruma:#BEA9D6;--neblina:#F6F4F8}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--neblina);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:linear-gradient(180deg,#161133 0%,#2A2160 40%,#161133 100%);min-height:100vh;overflow-x:hidden}
+a{color:var(--bruma)}
+h1,h2,h3{font-family:Manrope,Inter,sans-serif;margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.particulas{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.particulas i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:9px;background:var(--bruma);opacity:0;animation:sobe linear infinite}
+@keyframes sobe{0%{transform:translateY(0);opacity:0}10%{opacity:.55}90%{opacity:.55}100%{transform:translateY(-110vh) translateX(14px);opacity:0}}
+main{position:relative;z-index:1}
+footer{position:relative;z-index:1;border-top:1px solid rgba(190,169,214,.15);margin-top:40px;padding:36px 0 44px;font-size:14px;line-height:1.6;color:rgba(246,244,248,.7)}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0}
+footer .empresa{font-size:13px;color:rgba(246,244,248,.5)}
+@media (prefers-reduced-motion:reduce){.particulas,.halo,.simbolo-grande{animation:none!important}}
+
+.topo{position:sticky;top:0;z-index:5;background:rgba(22,17,51,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(190,169,214,.1)}
+.topo .wrap{display:flex;align-items:center;gap:10px;height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.marca svg{width:28px;height:28px}
+.marca span{font-family:Manrope,sans-serif;font-weight:500;font-size:19px;letter-spacing:.5px}
+.menu{display:flex;gap:22px;margin-left:auto;align-items:center}
+.menu a{color:rgba(246,244,248,.78);text-decoration:none;font-size:15px}
+.menu a:hover{color:var(--neblina)}
+.menu .cta{color:var(--neblina);background:var(--horizonte);padding:10px 18px;border-radius:999px;font-family:Manrope,sans-serif;font-weight:600}
+.menu .cta{white-space:nowrap}
+@media (max-width:480px){.menu{gap:14px}.menu .cta{padding:9px 14px;font-size:14px}}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:64px 0 40px}
+.selo{display:inline-block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bruma);margin-bottom:18px}
+.hero h1{font-weight:600;font-size:clamp(38px,5.6vw,62px);line-height:1.05;letter-spacing:-1px}
+.hero p.sub{font-size:19px;line-height:1.6;color:rgba(246,244,248,.82);margin:22px 0 30px;max-width:540px}
+.acoes{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 26px;border-radius:999px;font-family:Manrope,sans-serif;font-weight:600;font-size:17px;text-decoration:none;color:var(--neblina);background:var(--horizonte);box-shadow:0 10px 28px rgba(91,91,164,.45)}
+.btn:hover{background:#6a6ab8}
+.btn.vazado{background:transparent;border:1.5px solid rgba(190,169,214,.45);box-shadow:none}
+.btn.vazado:hover{background:rgba(190,169,214,.08)}
+.celular{position:relative;width:min(320px,100%);margin:0 auto;aspect-ratio:9/18.5;border-radius:44px;padding:12px;background:linear-gradient(160deg,#3A306F,#1d1744);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 0 0 1.5px rgba(190,169,214,.25)}
+.tela{position:relative;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#221a4f 0%,#161133 100%);padding:46px 18px 18px;display:flex;flex-direction:column;gap:14px}
+.tela .ola{font-family:Manrope,sans-serif;font-size:21px;font-weight:600}
+.tela .pergunta{font-size:14px;color:rgba(246,244,248,.75);margin-top:-6px}
+.humores{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.humor{height:42px;border-radius:14px;border:1px solid rgba(190,169,214,.25);background:rgba(58,48,111,.55);color:var(--neblina);font:500 13px Inter,sans-serif;cursor:pointer;padding:0}
+.humor[aria-pressed=true]{background:rgba(91,91,164,.75);border-color:var(--bruma)}
+.sugestao{border-radius:20px;padding:16px;background:rgba(58,48,111,.6);border:1px solid rgba(190,169,214,.2);display:flex;flex-direction:column;gap:8px;transition:opacity .4s}
+.sugestao small{color:var(--bruma);font-size:12.5px}
+.sugestao strong{font-family:Manrope,sans-serif;font-size:16px}
+.sugestao p{margin:0;font-size:13.5px;line-height:1.5;color:rgba(246,244,248,.8)}
+.sugestao .tocar{align-self:flex-start;margin-top:4px;font:600 13px Manrope,sans-serif;background:var(--horizonte);border-radius:999px;padding:9px 16px}
+.mini-halo{position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.35),rgba(91,91,164,.1) 50%,transparent 70%);animation:respira 11s ease-in-out infinite;pointer-events:none}
+@keyframes respira{0%,100%{transform:scale(.86);opacity:.6}50%{transform:scale(1.08);opacity:1}}
+@keyframes gira{to{transform:rotate(360deg)}}
+section{padding:72px 0;position:relative}
+.rotulo{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bruma);margin-bottom:12px}
+section h2{font-weight:600;font-size:clamp(28px,3.8vw,42px);line-height:1.12;letter-spacing:-.5px;max-width:720px}
+section .intro{font-size:18px;line-height:1.6;color:rgba(246,244,248,.78);max-width:640px;margin:16px 0 36px}
+.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grade.dois{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:24px;border-radius:22px;background:rgba(58,48,111,.42);border:1px solid rgba(190,169,214,.14)}
+.card h3{font-size:19px;font-weight:600;margin-bottom:10px}
+.card p{margin:0;color:rgba(246,244,248,.78);line-height:1.6;font-size:15.5px}
+.num{display:inline-flex;width:36px;height:36px;border-radius:999px;align-items:center;justify-content:center;background:rgba(190,169,214,.16);color:var(--bruma);font-weight:600;margin-bottom:14px}
+.temas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tema{padding:22px;border-radius:22px;background:linear-gradient(160deg,rgba(91,91,164,.35),rgba(58,48,111,.35));border:1px solid rgba(190,169,214,.18)}
+.tema h3{font-size:18px;margin-bottom:8px}
+.tema p{margin:0;font-size:15px;line-height:1.55;color:rgba(246,244,248,.78)}
+.destaque{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:44px;border-radius:32px;background:linear-gradient(135deg,rgba(190,169,214,.18),rgba(91,91,164,.28) 50%,rgba(58,48,111,.4));border:1px solid rgba(190,169,214,.25);overflow:hidden}
+.palco{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;max-width:340px;width:100%;margin:0 auto}
+.halo{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.4) 0%,rgba(91,91,164,.14) 45%,rgba(22,17,51,0) 70%);animation:respira 11s ease-in-out infinite}
+.simbolo-grande{width:56%;animation:gira 40s linear infinite}
+.simbolo-grande svg{width:100%;height:auto}
+.lista{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.lista li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.55;color:rgba(246,244,248,.86)}
+.lista li:before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:9px;background:var(--bruma)}
+.planos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:760px}
+.plano{padding:28px;border-radius:24px;background:rgba(58,48,111,.45);border:1px solid rgba(190,169,214,.18);display:flex;flex-direction:column;gap:6px}
+.plano.principal{border:2px solid var(--bruma);background:rgba(91,91,164,.32)}
+.plano .nome{font-family:Manrope,sans-serif;font-weight:600;font-size:18px}
+.plano .preco{font-family:Manrope,sans-serif;font-weight:700;font-size:34px;margin-top:6px}
+.plano .preco small{font-size:16px;font-weight:500;color:rgba(246,244,248,.7)}
+.plano .obs{color:rgba(246,244,248,.75);font-size:15px}
+.etiqueta{align-self:flex-start;font:600 12px Manrope,sans-serif;color:#161133;background:var(--bruma);padding:5px 10px;border-radius:999px;margin-bottom:6px}
+.linha-tempo{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 8px}
+.linha-tempo span{padding:10px 16px;border-radius:999px;background:rgba(58,48,111,.5);font-size:14.5px}
+.linha-tempo b{color:var(--bruma);font-weight:600;margin-right:6px}
+.pequeno{font-size:13.5px;color:rgba(246,244,248,.6);line-height:1.55;max-width:680px}
+.lista-espera{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:44px;border-radius:32px;background:rgba(58,48,111,.45);border:1px solid rgba(190,169,214,.2)}
+form{display:flex;flex-direction:column;gap:10px;width:100%}
+.linha{display:flex;gap:10px}
+.linha input{flex:1 1 0;width:auto}
+input,select{flex:none;width:100%;height:54px;border-radius:16px;border:1px solid rgba(190,169,214,.3);background:rgba(22,17,51,.55);color:var(--neblina);padding:0 16px;font:inherit;font-size:16px;min-width:0}
+input::placeholder{color:rgba(246,244,248,.5)}
+form button{height:56px;border:0;border-radius:999px;background:var(--horizonte);color:var(--neblina);font-family:Manrope,sans-serif;font-weight:600;font-size:17px;cursor:pointer;box-shadow:0 10px 28px rgba(91,91,164,.5)}
+form button:hover{background:#6a6ab8}form button:disabled{opacity:.6;cursor:default}
+.nota{font-size:13px;color:rgba(246,244,248,.65)}
+.ok{padding:20px;border-radius:18px;background:rgba(91,91,164,.35);border:1px solid var(--bruma)}
+.ok .grupo{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 22px;border-radius:999px;background:#25D366;color:#0b3d1f;font-family:Manrope,sans-serif;font-weight:700;text-decoration:none}
+.erro{color:#F2A08A;font-size:14px}
+.faq{max-width:780px;display:flex;flex-direction:column;gap:10px}
+.faq details{border-radius:18px;background:rgba(58,48,111,.42);border:1px solid rgba(190,169,214,.14);padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-family:Manrope,sans-serif;font-weight:600;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:0;top:16px;font-size:24px;color:var(--bruma);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;line-height:1.65;color:rgba(246,244,248,.8);font-size:15.5px}
+.crise{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:24px 28px;border-radius:22px;background:rgba(22,17,51,.6);border:1px solid rgba(190,169,214,.25)}
+.crise p{margin:0;flex:1 1 320px;line-height:1.6;color:rgba(246,244,248,.85)}
+.crise a{white-space:nowrap}
+.revela{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.revela.visivel{opacity:1;transform:none}
+@media (max-width:900px){.temas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){
+.topo .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:10px;row-gap:8px}
+.menu{order:3;width:100%;margin:0;overflow-x:auto;gap:20px;padding:4px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.menu::-webkit-scrollbar{display:none}
+.menu a{white-space:nowrap;flex:none;font-size:14px}
+.menu{gap:15px}
+.wrap{padding:0 20px}
+.hero{grid-template-columns:1fr;padding:36px 0 20px;gap:36px}
+.celular{width:min(290px,100%)}
+.grade,.grade.dois,.planos{grid-template-columns:1fr}
+.destaque,.lista-espera{grid-template-columns:1fr;padding:28px 22px;gap:28px}
+.palco{max-width:240px}
+section{padding:52px 0}
+.linha{flex-direction:column}.linha input{flex:none;width:100%}
+}
+@media (max-width:480px){.temas{grid-template-columns:1fr}.btn{width:100%}}
+@media (min-width:821px){.hero{min-height:min(880px,calc(100vh - 64px));padding:40px 0}}
+@media (min-width:1440px){
+.wrap{max-width:1400px;padding:0 48px}
+.topo .wrap{height:76px}
+.marca span{font-size:21px}.menu{gap:30px}.menu a{font-size:16px}
+.hero{gap:80px}
+.hero h1{font-size:clamp(64px,4.6vw,92px)}
+.hero p.sub{font-size:21px;max-width:640px}
+.btn{height:60px;padding:0 30px;font-size:18px}
+.celular{width:clamp(340px,22vw,420px)}
+section{padding:110px 0}
+section h2{font-size:clamp(44px,3.2vw,60px);max-width:900px}
+section .intro{font-size:20px;max-width:780px}
+.card{padding:30px}.card h3{font-size:21px}.card p{font-size:16.5px}
+}
+@media (min-width:2200px){.wrap{max-width:1680px}body{zoom:1.2}}
+@media (min-width:2800px){body{zoom:1.4}}
+@media (prefers-reduced-motion:reduce){.revela{opacity:1;transform:none;transition:none}.mini-halo,.halo,.simbolo-grande{animation:none}}
+.pagina-secao{padding-top:24px}.pagina-secao section h1{font-weight:600;font-size:clamp(36px,5vw,64px);line-height:1.06;letter-spacing:-1px;max-width:900px}</style></head>
+<body><div class="particulas" aria-hidden="true"><i style="left:0%;animation-duration:11s;animation-delay:0s"></i><i style="left:37%;animation-duration:18s;animation-delay:4s"></i><i style="left:74%;animation-duration:15s;animation-delay:8s"></i><i style="left:11%;animation-duration:12s;animation-delay:3s"></i><i style="left:48%;animation-duration:19s;animation-delay:7s"></i><i style="left:85%;animation-duration:16s;animation-delay:2s"></i><i style="left:22%;animation-duration:13s;animation-delay:6s"></i><i style="left:59%;animation-duration:20s;animation-delay:1s"></i><i style="left:96%;animation-duration:17s;animation-delay:5s"></i><i style="left:33%;animation-duration:14s;animation-delay:0s"></i><i style="left:70%;animation-duration:11s;animation-delay:4s"></i><i style="left:7%;animation-duration:18s;animation-delay:8s"></i><i style="left:44%;animation-duration:15s;animation-delay:3s"></i><i style="left:81%;animation-duration:12s;animation-delay:7s"></i><i style="left:18%;animation-duration:19s;animation-delay:2s"></i><i style="left:55%;animation-duration:16s;animation-delay:6s"></i><i style="left:92%;animation-duration:13s;animation-delay:1s"></i><i style="left:29%;animation-duration:20s;animation-delay:5s"></i></div><main><header class="topo"><div class="wrap">
+<a class="marca" href="/" aria-label="Neurapse, início"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg><span>Neurapse</span></a>
+<nav class="menu" aria-label="Principal"><a href="/como-funciona/" aria-current="page" style="color:#F6F4F8">Como funciona</a><a href="/ia/">A IA</a><a href="/planos/">Planos</a><a href="/duvidas/">Dúvidas</a><a href="/blog/">Blog</a><a class="cta" href="/#lista">Lista de espera</a></nav>
+</div></header><div class="wrap pagina-secao"><section>
+
+<h1>Você diz como está. O Neurapse cuida do próximo passo.</h1>
+<p class="intro">Sem precisar saber por onde começar. Em menos de um minuto você já está praticando.</p>
+<div class="grade">
+<div class="card revela"><div class="num">1</div><h3>Conte como você está</h3><p>Acelerado, para baixo, disperso, travado, cansado ou bem. Um toque basta.</p></div>
+<div class="card revela"><div class="num">2</div><h3>Receba a prática certa</h3><p>Uma respiração ou meditação para o que você está sentindo agora, de 1 a 25 minutos.</p></div>
+<div class="card revela"><div class="num">3</div><h3>Seja acompanhado</h3><p>O app aprende com você, monta o seu caminho e mostra como você se sentia antes e depois de cada prática.</p></div>
+</div>
+</section></div></main><footer><div class="wrap">
+<div>O Neurapse apoia o seu bem-estar e não substitui acompanhamento médico ou psicológico. Em crise, ligue 188 (CVV, grátis, 24 horas) ou 192 (SAMU).</div>
+<div class="links"><a href="/">Início</a><a href="/blog/">Blog</a><a href="/suporte.html">Suporte</a><a href="/termos.html">Termos de uso</a><a href="/privacidade.html">Política de privacidade</a><a href="https://www.instagram.com/neurapse.app/" target="_blank" rel="noopener" style="display:inline-flex;gap:6px;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@neurapse.app</a></div>
+<div class="empresa">NEURAPSE TECNOLOGIA INOVA SIMPLES (I.S.), CNPJ 70.083.538/0001-92, Florianópolis (SC)</div>
+</div></footer><script>
+const URL_LISTA='https://egxheohyfutdzkiqadkv.supabase.co/rest/v1/lista_espera',CHAVE='sb_publishable_sPo9z1Il6dQ-CZd60kRMzw_GOl3tI8-',GRUPO='https://chat.whatsapp.com/Bgn75PV75AzBZMCa6S7Mt5';
+function sucesso(f,titulo){f.outerHTML='<div class="ok"><strong>'+titulo+'</strong><p style="margin:8px 0 14px">Agora entre no grupo da lista de espera. É lá que as novidades e a pré-venda saem primeiro.</p><a class="grupo" href="'+GRUPO+'" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a><p style="margin:14px 0 0;font-size:14px">Siga também no Instagram: <a href="https://www.instagram.com/neurapse.app/" target="_blank" rel="noopener">@neurapse.app</a></p></div>';setTimeout(()=>{location.href=GRUPO},2500)}
+document.querySelectorAll('form[data-lista]').forEach(f=>f.addEventListener('submit',async e=>{
+  e.preventDefault();const b=f.querySelector('button'),msg=f.querySelector('.erro');msg.textContent='';
+  const email=f.email.value.trim().toLowerCase(),nome=f.nome?f.nome.value.trim():null,tema=f.tema?f.tema.value:null;
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='Confira o e-mail.';return}
+  b.disabled=true;b.textContent='Enviando...';
+  const origem=new URLSearchParams(location.search).get('utm_source')||document.referrer||'direto';
+  try{const r=await fetch(URL_LISTA,{method:'POST',headers:{apikey:CHAVE,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({email,nome:nome||null,tema:tema||null,origem:origem.slice(0,80)})});
+    if(r.ok||r.status===409){sucesso(f,'Pronto, você está na lista.')}
+    else{const t=await r.text();if(t.includes('duplicate')){sucesso(f,'Você já está na lista.')}else throw 0}
+  }catch(_){b.disabled=false;b.textContent='Quero entrar na lista';msg.textContent='Não deu certo agora. Tente de novo.'}
+}));
+const HUM=[["Acelerado", "Respiração 4-7-8", "Quando a cabeça não para, soltar o ar devagar ajuda a desacelerar."], ["Para baixo", "Silêncio guiado", "Num dia difícil, um passo pequeno já conta. Fique um pouco em silêncio comigo."], ["Disperso", "Foco", "Vamos trazer sua atenção de volta, sem pressa."], ["Travado", "Foco", "Um foco curto ajuda a dar o primeiro passo."], ["Cansado", "Respiração 4-7-8", "Um ritmo lento de respiração ajuda o corpo a descansar."], ["Bem", "Silêncio guiado", "Que bom. Aproveite para cuidar desse estado com um silêncio guiado."]];
+const bts=document.querySelectorAll('.humor'),sug=document.querySelector('.sugestao');
+bts.forEach((b,i)=>b.addEventListener('click',()=>{bts.forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');
+  sug.style.opacity=0;setTimeout(()=>{sug.querySelector('strong').textContent=HUM[i][1];sug.querySelector('p').textContent=HUM[i][2];sug.style.opacity=1},250)}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visivel');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.revela').forEach(el=>io.observe(el));
+</script></body></html>
