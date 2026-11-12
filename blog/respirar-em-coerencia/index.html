@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>O que é respirar em coerência e por que isso acalma corpo e mente · Neurapse</title><meta name="description" content="Um ritmo lento, de cerca de 5 a 6 respirações por minuto, que coloca coração e respiração no mesmo compasso."><link rel="canonical" href="https://neurapse.com.br/blog/respirar-em-coerencia/">
+<meta property="og:title" content="O que é respirar em coerência e por que isso acalma corpo e mente · Neurapse"><meta property="og:description" content="Um ritmo lento, de cerca de 5 a 6 respirações por minuto, que coloca coração e respiração no mesmo compasso."><meta property="og:type" content="article"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Neurapse"><meta property="og:image" content="https://neurapse.com.br/og.png"><meta property="og:url" content="https://neurapse.com.br/blog/respirar-em-coerencia/"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#120E2B"><link rel="icon" href="/favicon.png"><link rel="apple-touch-icon" href="/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--fundo:#120E2B;--fundo2:#1A1440;--indigo:#3A306F;--horizonte:#5B5BA4;--horizonte2:#6C6CBC;--bruma:#BEA9D6;--neblina:#F6F4F8;--tinta:#1A1440;--tinta2:#4A4370;--txt2:rgba(246,244,248,.76);--borda:rgba(190,169,214,.16);--max:1200px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:84px}
+html,body{margin:0;background:var(--fundo);color:var(--neblina);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{overflow-x:hidden;background:radial-gradient(1200px 700px at 85% -10%,rgba(91,91,164,.38),transparent 60%),radial-gradient(900px 600px at -10% 20%,rgba(58,48,111,.55),transparent 60%),var(--fundo)}
+body.menu-aberto{overflow:hidden}
+a{color:var(--bruma)}
+img,svg{display:block}
+h1,h2,h3,h4{font-family:Manrope,Inter,sans-serif;margin:0;font-weight:600}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.ic{flex:none}
+main{position:relative;z-index:1}
+.particulas{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.particulas i{position:absolute;bottom:-10px;width:3px;height:3px;border-radius:9px;background:var(--bruma);opacity:0;animation:sobe linear infinite}
+@keyframes sobe{0%{transform:translateY(0);opacity:0}10%{opacity:.45}90%{opacity:.45}100%{transform:translateY(-110vh) translateX(14px);opacity:0}}
+
+/* tipografia */
+.rotulo{display:inline-flex;align-items:center;gap:8px;font:600 12.5px Manrope,sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:var(--bruma);margin-bottom:18px}
+.rotulo:before{content:"";width:18px;height:1.5px;background:currentColor;opacity:.7}
+.titulo-xl{font-size:clamp(42px,6.4vw,84px);line-height:1;letter-spacing:-.035em}
+.titulo-l{font-size:clamp(32px,4.4vw,56px);line-height:1.05;letter-spacing:-.03em}
+.titulo-m{font-size:clamp(26px,3vw,36px);line-height:1.12;letter-spacing:-.02em}
+.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.62;color:var(--txt2)}
+.intro{font-size:18px;line-height:1.62;color:var(--txt2);max-width:640px;margin:18px 0 0}
+.sub{font-size:18px;line-height:1.6;color:var(--txt2)}
+.grad{background:linear-gradient(100deg,#F6F4F8 10%,#BEA9D6 60%,#8E86D6);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* botões */
+.acoes{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;border:0;cursor:pointer;font:600 16.5px Manrope,sans-serif;text-decoration:none;color:var(--neblina);background:linear-gradient(135deg,#6C6CBC,#5B5BA4 55%,#4C4C96);box-shadow:0 12px 32px rgba(91,91,164,.45),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(91,91,164,.55),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn.vazado{background:rgba(246,244,248,.04);border:1.5px solid rgba(190,169,214,.38);box-shadow:none}
+.btn.vazado:hover{background:rgba(190,169,214,.1)}
+.btn.claro{background:var(--neblina);color:var(--tinta);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.btn.peq{height:46px;padding:0 20px;font-size:15px}
+.link-seta{display:inline-flex;align-items:center;gap:8px;font:600 15.5px Manrope,sans-serif;color:var(--bruma);text-decoration:none}
+.link-seta .ic{transition:transform .2s}
+.link-seta:hover .ic{transform:translateX(4px)}
+
+/* cabeçalho */
+.topo{position:sticky;top:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.topo.rolou,.topo.solido{background:rgba(18,14,43,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom-color:rgba(190,169,214,.1)}
+.topo .wrap{display:flex;align-items:center;gap:12px;height:76px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.marca svg{width:30px;height:30px}
+.marca span{font:600 20px Manrope,sans-serif;letter-spacing:.3px}
+.nav{display:flex;gap:4px;margin-left:auto;align-items:center}
+.nav a{color:rgba(246,244,248,.78);text-decoration:none;font:500 15px Inter,sans-serif;padding:10px 14px;border-radius:999px;transition:color .2s,background .2s}
+.nav a:hover,.nav a[aria-current=page]{color:var(--neblina);background:rgba(190,169,214,.1)}
+.topo .btn{margin-left:10px}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border-radius:999px;border:1px solid var(--borda);background:rgba(246,244,248,.05);color:var(--neblina);align-items:center;justify-content:center;cursor:pointer}
+.menu-movel{position:fixed;inset:0;z-index:60;background:rgba(18,14,43,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:16px 22px 32px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow-y:auto}
+body.menu-aberto .menu-movel{opacity:1;visibility:visible}
+.menu-movel .linha-topo{display:flex;align-items:center;height:60px}
+.menu-movel .burger{display:flex}
+.menu-movel nav{display:flex;flex-direction:column;margin:28px 0 auto}
+.menu-movel nav a{font:600 26px Manrope,sans-serif;color:var(--neblina);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(190,169,214,.1);display:flex;justify-content:space-between;align-items:center;transform:translateY(12px);opacity:0;transition:transform .4s,opacity .4s}
+body.menu-aberto .menu-movel nav a{transform:none;opacity:1}
+.menu-movel nav a .ic{color:var(--bruma)}
+.menu-movel .btn{width:100%;margin-top:24px}
+
+/* seções */
+.secao{padding:120px 0;position:relative}
+.secao.compacta{padding:80px 0}
+.clara{background:var(--neblina);color:var(--tinta)}
+.clara .rotulo{color:#6A55A0}
+.clara .lead,.clara .intro,.clara .sub{color:var(--tinta2)}
+.clara a{color:#5B4BA0}
+.clara .link-seta{color:#5B4BA0}
+.cabeca-secao{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px;flex-wrap:wrap}
+.cabeca-secao .intro{margin-top:16px}
+.centro{text-align:center;margin-left:auto;margin-right:auto}
+.centro .intro{margin-left:auto;margin-right:auto}
+.centro .rotulo{justify-content:center}
+
+/* revelar ao rolar */
+.revela{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.revela.visivel{opacity:1;transform:none}
+.revela.d1{transition-delay:.08s}.revela.d2{transition-delay:.16s}.revela.d3{transition-delay:.24s}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding:56px 0 96px}
+.hero .lead{margin:26px 0 36px;max-width:560px}
+.lojas{display:flex;align-items:center;gap:12px;margin-top:30px;color:rgba(246,244,248,.6);font-size:14px;flex-wrap:wrap}
+.lojas span.pilula{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--borda);background:rgba(246,244,248,.04);color:rgba(246,244,248,.8);font-weight:500}
+.palco-celular{position:relative;display:flex;justify-content:center;padding:20px 0}
+.palco-celular:before{content:"";position:absolute;width:520px;max-width:120%;aspect-ratio:1;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(190,169,214,.28),rgba(91,91,164,.12) 45%,transparent 68%);animation:respira 11s ease-in-out infinite}
+.flutua{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px;border-radius:18px;background:rgba(32,25,72,.82);border:1px solid rgba(190,169,214,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 40px rgba(0,0,0,.35);font-size:13.5px;line-height:1.35;animation:boia 7s ease-in-out infinite}
+.flutua b{display:block;font:600 14.5px Manrope,sans-serif;color:var(--neblina)}
+.flutua small{color:rgba(246,244,248,.65)}
+.flutua .bola{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#6C6CBC,#3A306F);color:var(--neblina)}
+.flutua.f1{left:-6%;top:5%}
+.flutua.f2{right:-8%;bottom:6%;animation-delay:-3.5s}
+@keyframes boia{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes respira{0%,100%{transform:translate(-50%,-50%) scale(.86);opacity:.65}50%{transform:translate(-50%,-50%) scale(1.06);opacity:1}}
+
+/* celular */
+.celular{position:relative;z-index:2;width:300px;max-width:100%;aspect-ratio:9/19;border-radius:48px;padding:11px;background:linear-gradient(160deg,#4a3f86,#1d1744 60%,#2a2160);box-shadow:0 40px 90px rgba(0,0,0,.5),inset 0 0 0 1.5px rgba(190,169,214,.28)}
+.celular:after{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:86px;height:24px;border-radius:20px;background:#0c0920;z-index:3}
+.tela{position:relative;height:100%;border-radius:38px;overflow:hidden;background:linear-gradient(180deg,#241c55 0%,#161133 100%);padding:58px 18px 18px;display:flex;flex-direction:column;gap:12px;color:var(--neblina);text-align:left}
+.tela .t-titulo{font:600 20px Manrope,sans-serif}
+.tela .t-sub{font-size:13px;color:rgba(246,244,248,.72);margin-top:-4px;line-height:1.4}
+.tela .t-rot{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--bruma)}
+.humores{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.humor{height:40px;border-radius:13px;border:1px solid rgba(190,169,214,.25);background:rgba(58,48,111,.55);color:var(--neblina);font:500 12.5px Inter,sans-serif;cursor:pointer;padding:0;transition:background .2s,border-color .2s}
+.humor[aria-pressed=true]{background:rgba(91,91,164,.85);border-color:var(--bruma)}
+.sugestao{border-radius:20px;padding:15px;background:rgba(58,48,111,.6);border:1px solid rgba(190,169,214,.2);display:flex;flex-direction:column;gap:7px;transition:opacity .3s}
+.sugestao strong{font:600 15.5px Manrope,sans-serif}
+.sugestao p{font-size:12.8px;line-height:1.48;color:rgba(246,244,248,.8)}
+.sugestao .tocar{align-self:flex-start;margin-top:3px;font:600 12.5px Manrope,sans-serif;background:var(--horizonte);border-radius:999px;padding:8px 15px}
+.mini-halo{position:absolute;right:-70px;bottom:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.32),rgba(91,91,164,.1) 50%,transparent 70%);animation:pulsa 11s ease-in-out infinite;pointer-events:none}
+@keyframes pulsa{0%,100%{transform:scale(.86);opacity:.6}50%{transform:scale(1.08);opacity:1}}
+/* tela: prática */
+.t-pratica{align-items:center;text-align:center;justify-content:space-between;padding-bottom:28px}
+.anel{position:relative;width:190px;height:190px;display:flex;align-items:center;justify-content:center}
+.anel i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(190,169,214,.55),rgba(91,91,164,.25) 55%,transparent 72%);animation:fole 11s ease-in-out infinite}
+.anel i:nth-child(2){inset:30px;background:radial-gradient(circle,rgba(246,244,248,.5),rgba(190,169,214,.2) 60%,transparent 75%);animation-delay:-.4s}
+.anel span{position:relative;font:600 15px Manrope,sans-serif;letter-spacing:.5px}
+.anel .ins{animation:txt-a 11s infinite}.anel .exp{position:absolute;animation:txt-b 11s infinite}
+@keyframes fole{0%,100%{transform:scale(.62)}50%{transform:scale(1)}}
+@keyframes txt-a{0%,45%{opacity:1}50%,95%{opacity:0}100%{opacity:1}}
+@keyframes txt-b{0%,45%{opacity:0}50%,95%{opacity:1}100%{opacity:0}}
+.barra-tempo{width:100%;height:4px;border-radius:9px;background:rgba(246,244,248,.15);overflow:hidden}
+.barra-tempo i{display:block;height:100%;width:38%;background:var(--bruma);border-radius:9px}
+.controles{display:flex;gap:26px;align-items:center;justify-content:center}
+.controles b{width:56px;height:56px;border-radius:50%;background:var(--neblina);color:var(--tinta);display:flex;align-items:center;justify-content:center}
+/* tela: conversa */
+.bolha{max-width:86%;padding:10px 13px;border-radius:16px;font-size:12.6px;line-height:1.45}
+.bolha.eu{align-self:flex-end;background:var(--horizonte);border-bottom-right-radius:5px}
+.bolha.ia{align-self:flex-start;background:rgba(58,48,111,.75);border:1px solid rgba(190,169,214,.18);border-bottom-left-radius:5px}
+.chip-pratica{align-self:flex-start;display:flex;gap:8px;align-items:center;padding:8px 12px;border-radius:12px;background:rgba(190,169,214,.16);font-size:12px;font-weight:500}
+.campo{margin-top:auto;height:40px;border-radius:999px;border:1px solid rgba(190,169,214,.25);display:flex;align-items:center;padding:0 14px;font-size:12.5px;color:rgba(246,244,248,.5)}
+.digitando{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;border-radius:16px;background:rgba(58,48,111,.75)}
+.digitando i{width:6px;height:6px;border-radius:50%;background:var(--bruma);animation:pisca 1.2s infinite}
+.digitando i:nth-child(2){animation-delay:.2s}.digitando i:nth-child(3){animation-delay:.4s}
+@keyframes pisca{0%,80%,100%{opacity:.25}40%{opacity:1}}
+/* tela: caminho e progresso */
+.passo-dia{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;background:rgba(58,48,111,.55);border:1px solid rgba(190,169,214,.14);font-size:12.6px}
+.passo-dia .ok{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bruma);color:var(--tinta);flex:none}
+.passo-dia .vazio{width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(190,169,214,.5);flex:none}
+.passo-dia small{display:block;color:rgba(246,244,248,.6);font-size:11px}
+.passo-dia.feito span{opacity:.8}
+.grafico{display:flex;align-items:flex-end;gap:7px;height:110px;padding:12px;border-radius:16px;background:rgba(58,48,111,.5)}
+.grafico div{flex:1;display:flex;gap:2px;align-items:flex-end;height:100%}
+.grafico i{flex:1;border-radius:4px 4px 2px 2px;background:rgba(190,169,214,.35)}
+.grafico i+i{background:var(--bruma)}
+.legenda{display:flex;gap:14px;font-size:11px;color:rgba(246,244,248,.7)}
+.legenda span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:3px;margin-right:6px;background:rgba(190,169,214,.35)}
+.legenda span+span:before{background:var(--bruma)}
+.selos{display:flex;gap:7px;flex-wrap:wrap}
+.selos span{padding:7px 11px;border-radius:999px;background:rgba(190,169,214,.16);font-size:11.5px;font-weight:500}
+.meta{display:flex;align-items:center;gap:12px;padding:12px;border-radius:16px;background:rgba(58,48,111,.5);font-size:12.5px}
+.meta .roda{width:46px;height:46px;border-radius:50%;background:conic-gradient(var(--bruma) 0 80%,rgba(246,244,248,.12) 80% 100%);display:flex;align-items:center;justify-content:center;flex:none}
+.meta .roda:after{content:"4/5";width:36px;height:36px;border-radius:50%;background:#221a4f;display:flex;align-items:center;justify-content:center;font:600 11.5px Manrope,sans-serif}
+/* tela: lembrete */
+.t-bloqueio{background:linear-gradient(180deg,#2c2366,#161133);align-items:center;padding-top:70px}
+.t-hora{font:300 64px Manrope,sans-serif;letter-spacing:-2px;line-height:1}
+.t-data{font-size:13px;color:rgba(246,244,248,.75);margin-bottom:18px}
+.notif{width:100%;display:flex;gap:10px;padding:12px;border-radius:18px;background:rgba(246,244,248,.14);font-size:12.3px;line-height:1.4;animation:chega 6s ease-in-out infinite}
+.notif .app{width:30px;height:30px;border-radius:8px;background:#161133;display:flex;align-items:center;justify-content:center;flex:none}
+.notif .app svg{width:20px;height:20px}
+.notif b{display:block;font-size:12.5px}
+@keyframes chega{0%,8%{opacity:0;transform:translateY(-14px)}16%,88%{opacity:1;transform:none}100%{opacity:0}}
+
+/* faixa de fatos */
+.fatos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.fatos div{display:flex;gap:14px;align-items:center;padding:28px 22px;font-size:15px;line-height:1.4;color:rgba(246,244,248,.85)}
+.fatos div+div{border-left:1px solid var(--borda)}
+.fatos .ic{color:var(--bruma)}
+
+/* cartões */
+.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grade.dois{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grade.quatro{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{position:relative;padding:30px;border-radius:26px;background:linear-gradient(160deg,rgba(58,48,111,.55),rgba(30,24,68,.55));border:1px solid var(--borda);transition:transform .3s,border-color .3s,opacity .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);border-color:rgba(190,169,214,.32)}
+.card h3{font-size:20px;margin:0 0 10px;letter-spacing:-.01em}
+.card p{color:var(--txt2);line-height:1.62;font-size:15.5px}
+.card .icone{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(108,108,188,.5),rgba(58,48,111,.6));color:var(--neblina);margin-bottom:22px;border:1px solid rgba(190,169,214,.22)}
+.clara .card{background:#fff;border-color:rgba(26,20,64,.07);box-shadow:0 1px 2px rgba(26,20,64,.04),0 18px 40px rgba(26,20,64,.06)}
+.clara .card p{color:var(--tinta2)}
+.clara .card .icone{background:linear-gradient(135deg,#EDE7F6,#DCD3EE);color:#4C3F8F;border-color:transparent}
+.num{display:inline-flex;width:36px;height:36px;border-radius:999px;align-items:center;justify-content:center;background:rgba(190,169,214,.16);color:var(--bruma);font-weight:600;margin-bottom:14px}
+
+/* momentos */
+.momento{display:flex;flex-direction:column;min-height:300px}
+.momento h3{font-size:22px}
+.momento .link-seta{margin-top:auto;padding-top:22px;font-size:14.5px}
+
+/* linhas de recurso */
+.recurso{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:56px 0}
+.recurso.inverte .texto{order:2}
+.recurso .texto .num-grande{font:600 15px Manrope,sans-serif;color:var(--bruma);letter-spacing:1px;margin-bottom:16px;display:block}
+.recurso .texto .intro{margin-bottom:28px}
+.lista-check{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:14px}
+.lista-check li{display:flex;gap:12px;align-items:flex-start;line-height:1.55;font-size:16px;color:rgba(246,244,248,.85)}
+.lista-check li .ic{color:var(--bruma);margin-top:2px}
+.clara .lista-check li{color:var(--tinta2)}
+.clara .lista-check li .ic{color:#6A55A0}
+
+/* coerência: respire comigo */
+.destaque{position:relative;overflow:hidden;border-radius:40px;padding:80px;background:radial-gradient(700px 500px at 20% 50%,rgba(108,108,188,.4),transparent 60%),linear-gradient(140deg,#2a2160,#1a1440 60%,#231b55);border:1px solid var(--borda);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.respira{position:relative;width:min(340px,100%);aspect-ratio:1;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.respira .o{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(190,169,214,.25)}
+.respira .o2{inset:12%;border-color:rgba(190,169,214,.18)}
+.respira .bola{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 40% 35%,rgba(246,244,248,.92),rgba(190,169,214,.75) 38%,rgba(91,91,164,.55) 68%,rgba(91,91,164,0) 71%);transform:scale(.55);box-shadow:0 0 80px rgba(190,169,214,.25)}
+.respira.ativo .bola{animation:bola 11s ease-in-out infinite}
+.respira:not(.ativo) .bola{animation:bola-calma 11s ease-in-out infinite}
+@keyframes bola{0%{transform:scale(.55)}50%{transform:scale(1)}100%{transform:scale(.55)}}
+@keyframes bola-calma{0%,100%{transform:scale(.6)}50%{transform:scale(.72)}}
+.respira .simb{position:absolute;width:20%;color:#2a2160;opacity:.85}
+.respira .frase{position:absolute;bottom:-46px;left:0;right:0;text-align:center;font:600 20px Manrope,sans-serif;letter-spacing:.3px;min-height:28px}
+.respira-acoes{display:flex;gap:14px;align-items:center;margin-top:70px;flex-wrap:wrap;justify-content:center}
+.respira-acoes .tempo{font:500 14.5px Inter,sans-serif;color:var(--txt2)}
+
+/* conversa: regras */
+.regras{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.regra{display:flex;gap:14px;padding:20px;border-radius:20px;background:rgba(58,48,111,.38);border:1px solid var(--borda)}
+.regra .ic{color:var(--bruma);margin-top:2px}
+.regra b{display:block;font:600 16px Manrope,sans-serif;margin-bottom:4px}
+.regra span{font-size:14.5px;line-height:1.55;color:var(--txt2)}
+
+/* manifesto */
+.manifesto{text-align:center;max-width:1000px;margin:0 auto}
+.manifesto p.frase{font:500 clamp(28px,4vw,50px)/1.18 Manrope,sans-serif;letter-spacing:-.025em}
+.manifesto p.frase em{font-style:normal;color:var(--bruma)}
+
+/* blog */
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.post{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(26,20,64,.04),0 18px 40px rgba(26,20,64,.07);transition:transform .3s,box-shadow .3s,opacity .9s}
+.post:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(26,20,64,.05),0 26px 54px rgba(26,20,64,.12)}
+.post .corpo-post{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.post h3{font-size:20px;line-height:1.28;color:var(--tinta);letter-spacing:-.01em}
+.post p{font-size:15px;line-height:1.55;color:var(--tinta2)}
+.post .meta-post{margin-top:auto;padding-top:8px;font-size:13px;color:#7B7499}
+.etiqueta{align-self:flex-start;display:inline-flex;padding:6px 12px;border-radius:999px;background:#EEE8F7;color:#5B4BA0;font:600 12px Manrope,sans-serif;letter-spacing:.3px}
+.capa{position:relative;aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center;color:rgba(246,244,248,.92)}
+.capa .c1,.capa .c2{position:absolute;border-radius:50%;border:1px solid rgba(246,244,248,.22)}
+.capa .c1{width:70%;aspect-ratio:1;right:-18%;top:-30%}
+.capa .c2{width:46%;aspect-ratio:1;left:-12%;bottom:-24%;background:rgba(246,244,248,.06)}
+.capa .glow{position:absolute;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(246,244,248,.35),transparent 65%)}
+.capa .icone-capa{position:relative;width:24%;height:auto}
+.capa .marca-capa{position:absolute;left:18px;bottom:16px;width:26px;opacity:.75}
+.capa .marca-capa svg{width:100%;height:auto}
+.capa.pensamentos{background:linear-gradient(135deg,#6C6CBC,#3A306F 70%)}
+.capa.respiracao{background:linear-gradient(135deg,#8E7FD0,#4A3D8F 65%,#2A2160)}
+.capa.dias-dificeis{background:linear-gradient(135deg,#A58BC9,#5B4BA0 60%,#3A306F)}
+.capa.celular{background:linear-gradient(135deg,#5A6FB8,#3A3F8F 60%,#231b55)}
+.capa.tudo-pra-depois{background:linear-gradient(135deg,#7E6BC0,#463A8A 55%,#1F1850)}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.filtros button{height:42px;padding:0 18px;border-radius:999px;border:1px solid rgba(26,20,64,.12);background:#fff;color:var(--tinta);font:600 14px Manrope,sans-serif;cursor:pointer;transition:background .2s,color .2s}
+.filtros button[aria-pressed=true]{background:var(--tinta);color:var(--neblina);border-color:var(--tinta)}
+.post-destaque{display:grid;grid-template-columns:1.1fr .9fr;border-radius:32px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(26,20,64,.04),0 24px 54px rgba(26,20,64,.09);margin-bottom:28px;transition:transform .3s,opacity .9s}
+.post-destaque:hover{transform:translateY(-4px)}
+.post-destaque .capa{aspect-ratio:auto;min-height:360px}
+.post-destaque .corpo-post{padding:44px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.post-destaque h2{font-size:clamp(26px,2.8vw,36px);line-height:1.15;color:var(--tinta);letter-spacing:-.02em}
+.post-destaque p{font-size:16.5px;line-height:1.6;color:var(--tinta2)}
+
+/* artigo */
+.artigo-topo{padding:40px 0 48px;max-width:860px}
+.trilha{display:flex;gap:8px;align-items:center;font-size:14px;color:rgba(246,244,248,.6);margin-bottom:26px;flex-wrap:wrap}
+.trilha a{color:rgba(246,244,248,.75);text-decoration:none}
+.trilha a:hover{color:var(--neblina)}
+.artigo-topo h1{font-size:clamp(34px,4.6vw,58px);line-height:1.06;letter-spacing:-.03em;margin:18px 0 20px}
+.artigo-topo .lead{max-width:720px}
+.autor{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:14.5px;color:var(--txt2)}
+.autor .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#6C6CBC,#3A306F);display:flex;align-items:center;justify-content:center;flex:none}
+.autor .av svg{width:24px;height:24px}
+.autor b{color:var(--neblina);display:block;font-weight:600}
+.artigo-capa{border-radius:32px;overflow:hidden;margin-bottom:-120px;position:relative;z-index:2;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.artigo-capa .capa{aspect-ratio:21/9}
+.artigo-capa .capa .icone-capa{width:11%}
+.artigo-corpo{padding:180px 0 100px}
+.texto-longo{max-width:720px;margin:0 auto;font-size:18.5px;line-height:1.78;color:#2E2852}
+.texto-longo p{margin:0 0 24px}
+.texto-longo h2{font-size:clamp(24px,2.4vw,30px);line-height:1.2;letter-spacing:-.02em;color:var(--tinta);margin:52px 0 18px}
+.texto-longo ul,.texto-longo ol{margin:0 0 26px;padding-left:24px}
+.texto-longo li{margin-bottom:10px;padding-left:4px}
+.texto-longo strong{color:var(--tinta)}
+.texto-longo a{color:#5B4BA0;font-weight:500}
+.chamada{max-width:720px;margin:48px auto 0;padding:34px;border-radius:28px;background:linear-gradient(135deg,#2a2160,#1A1440);color:var(--neblina);display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.chamada h3{font-size:22px;margin-bottom:6px}
+.chamada p{color:var(--txt2);font-size:15.5px;line-height:1.55;max-width:420px}
+.clara .chamada .btn.claro{color:var(--tinta)}
+.aviso-saude{max-width:720px;margin:28px auto 0;padding:20px 22px;border-radius:20px;background:#EEE8F7;color:var(--tinta2);font-size:14.5px;line-height:1.6}
+.compartilhe{max-width:720px;margin:28px auto 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14.5px;color:var(--tinta2)}
+.compartilhe a,.compartilhe button{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;border:1px solid rgba(26,20,64,.14);background:#fff;color:var(--tinta)!important;font:600 14px Manrope,sans-serif;text-decoration:none;cursor:pointer}
+
+/* planos */
+.linha-tempo{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:48px auto 18px;position:relative;max-width:900px}
+.linha-tempo:before{content:"";position:absolute;left:16.6%;right:16.6%;top:21px;height:2px;background:linear-gradient(90deg,var(--bruma),rgba(190,169,214,.25))}
+.linha-tempo div{position:relative;text-align:center;padding:0 10px}
+.linha-tempo .ponto{width:44px;height:44px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;background:var(--fundo2);border:2px solid var(--bruma);color:var(--bruma)}
+.linha-tempo b{display:block;font:600 17px Manrope,sans-serif;margin-bottom:4px}
+.linha-tempo span{font-size:14.5px;color:var(--txt2)}
+.planos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:44px auto 0}
+.plano{position:relative;padding:36px;border-radius:30px;background:linear-gradient(160deg,rgba(58,48,111,.5),rgba(30,24,68,.6));border:1px solid var(--borda);display:flex;flex-direction:column;gap:6px}
+.plano.principal{background:linear-gradient(160deg,#4a3f96,#2c2470);border-color:rgba(190,169,214,.5);box-shadow:0 30px 70px rgba(58,48,111,.55)}
+.plano .selo-plano{position:absolute;top:22px;right:22px;padding:6px 12px;border-radius:999px;background:var(--neblina);color:var(--tinta);font:600 12px Manrope,sans-serif}
+.plano .nome{font:600 17px Manrope,sans-serif;color:var(--bruma)}
+.plano .preco{font:600 44px Manrope,sans-serif;letter-spacing:-.03em;margin-top:6px}
+.plano .preco small{font-size:16px;font-weight:500;color:var(--txt2);letter-spacing:0}
+.plano .obs{color:var(--txt2);font-size:15px}
+.plano ul{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:11px}
+.plano li{display:flex;gap:10px;font-size:15px;line-height:1.45}
+.plano li .ic{color:var(--bruma)}
+.pequeno{font-size:14px;line-height:1.6;color:rgba(246,244,248,.62)}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq details{border-radius:22px;background:rgba(58,48,111,.38);border:1px solid var(--borda);transition:background .2s,opacity .9s,transform .9s}
+.faq details[open]{background:rgba(58,48,111,.6)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 26px;font:600 17.5px Manrope,sans-serif;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font:300 28px Manrope,sans-serif;color:var(--bruma);transition:transform .3s;line-height:1}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{padding:0 26px 24px;line-height:1.7;color:var(--txt2);font-size:16px}
+.clara .faq details{background:#fff;border-color:rgba(26,20,64,.08)}
+.clara .faq details p{color:var(--tinta2)}
+.clara .faq summary:after{color:#6A55A0}
+
+/* lista de espera */
+.cta-final{position:relative;overflow:hidden;border-radius:40px;padding:80px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;background:radial-gradient(600px 400px at 90% 10%,rgba(190,169,214,.35),transparent 60%),linear-gradient(135deg,#5B5BA4,#3A306F 55%,#231b55)}
+.cta-final .simb-fundo{position:absolute;right:-90px;bottom:-110px;width:420px;opacity:.09;color:var(--neblina)}
+.cta-final .simb-fundo svg{width:100%;height:auto}
+form[data-lista]{position:relative;display:flex;flex-direction:column;gap:12px}
+form[data-lista] input,form[data-lista] select{height:58px;border-radius:18px;border:1px solid rgba(246,244,248,.25);background:rgba(18,14,43,.35);color:var(--neblina);padding:0 18px;font:16px Inter,sans-serif;outline:none;width:100%;-webkit-appearance:none;appearance:none}
+form[data-lista] select{background-image:linear-gradient(45deg,transparent 50%,#BEA9D6 50%),linear-gradient(135deg,#BEA9D6 50%,transparent 50%);background-position:calc(100% - 24px) 26px,calc(100% - 18px) 26px;background-size:6px 6px;background-repeat:no-repeat;padding-right:44px}
+form[data-lista] select option{color:#161133}
+form[data-lista] input::placeholder{color:rgba(246,244,248,.55)}
+form[data-lista] input:focus,form[data-lista] select:focus{border-color:var(--bruma);background-color:rgba(18,14,43,.5)}
+form[data-lista] .linha{display:grid;grid-template-columns:1fr 1.4fr;gap:12px}
+form[data-lista] button{height:58px;border:0;border-radius:18px;background:var(--neblina);color:var(--tinta);font:600 17px Manrope,sans-serif;cursor:pointer;transition:transform .2s}
+form[data-lista] button:hover{transform:translateY(-2px)}
+form[data-lista] button:disabled{opacity:.6}
+form[data-lista] .erro{min-height:18px;color:#FFD3D8;font-size:14px}
+form[data-lista] .nota{font-size:13px;color:rgba(246,244,248,.65)}
+.ok{padding:26px;border-radius:22px;background:rgba(18,14,43,.35);border:1px solid rgba(246,244,248,.2);line-height:1.6}
+.ok .grupo{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 22px;border-radius:999px;background:var(--neblina);color:var(--tinta);text-decoration:none;font:600 15px Manrope,sans-serif}
+
+/* crise */
+.crise{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:28px 32px;border-radius:26px;background:rgba(190,169,214,.1);border:1px solid rgba(190,169,214,.25);flex-wrap:wrap}
+.crise p{flex:1;min-width:260px;line-height:1.6;color:rgba(246,244,248,.88);font-size:16px}
+
+/* páginas internas */
+.pagina-topo{padding:64px 0 80px;max-width:920px}
+.pagina-topo.centro{text-align:center}
+.pagina-topo .lead{margin-top:24px;max-width:700px}
+.pagina-topo.centro .lead{margin-left:auto;margin-right:auto}
+.pagina-topo.centro .rotulo{justify-content:center}
+.dados-empresa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.dados-empresa div{padding:24px;border-radius:22px;background:rgba(58,48,111,.42);border:1px solid var(--borda)}
+.dados-empresa small{display:block;font:600 12px Manrope,sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--bruma);margin-bottom:8px}
+.dados-empresa b{font:600 17px Manrope,sans-serif;line-height:1.4}
+.fundador{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.fundador .retrato{aspect-ratio:4/5;border-radius:32px;overflow:hidden;position:relative;display:flex;align-items:flex-end;padding:28px;color:var(--neblina);background:radial-gradient(400px 300px at 70% 20%,rgba(190,169,214,.45),transparent 60%),linear-gradient(160deg,#5B5BA4,#2a2160 70%)}
+.fundador .retrato>svg{position:absolute;width:52%;top:50%;left:50%;transform:translate(-50%,-62%);opacity:.92}
+.fundador .retrato b{position:relative;font:600 22px Manrope,sans-serif;display:block}
+.fundador .retrato small{position:relative;display:block;color:rgba(246,244,248,.8);font-size:14.5px;margin-top:4px}
+.numero-crise{display:flex;align-items:center;gap:22px;padding:30px;border-radius:28px;text-decoration:none;color:var(--neblina)!important;background:linear-gradient(135deg,#5B5BA4,#3A306F);box-shadow:0 20px 50px rgba(58,48,111,.5);transition:transform .2s,opacity .9s}
+.numero-crise:hover{transform:translateY(-3px)}
+.numero-crise .n{font:600 56px Manrope,sans-serif;letter-spacing:-.03em;line-height:1}
+.numero-crise b{display:block;font:600 18px Manrope,sans-serif;margin-bottom:4px}
+.numero-crise span span{color:var(--txt2);font-size:15px;line-height:1.5}
+.doc{max-width:760px;padding:48px 0 80px}
+.doc h1{font-size:clamp(32px,4vw,46px);letter-spacing:-.02em;margin:0 0 14px}
+.doc h2{font-size:22px;margin:40px 0 12px}
+.doc p,.doc li{line-height:1.7;color:rgba(246,244,248,.85);font-size:16.5px;margin:0 0 14px}
+.doc ul,.doc ol{padding-left:22px}
+.doc .resumo{color:rgba(246,244,248,.8);line-height:1.6}
+.doc .data{color:rgba(246,244,248,.55);font-size:13.5px;margin-bottom:28px}
+.guia .acoes{margin-bottom:56px}
+.contato{display:inline-flex;align-items:center;gap:10px;margin:6px 0 10px;padding:14px 22px;border-radius:999px;background:var(--horizonte);color:var(--neblina);text-decoration:none;font:600 16px Manrope,sans-serif}
+
+/* rodapé */
+footer.rodape{position:relative;z-index:1;padding:88px 0 40px;background:#0D0A22;border-top:1px solid rgba(190,169,214,.08)}
+.rodape .colunas{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:40px}
+.rodape .sobre p{color:rgba(246,244,248,.65);line-height:1.65;font-size:15px;margin:18px 0 22px;max-width:320px}
+.rodape h4{font:600 13px Manrope,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:rgba(246,244,248,.5);margin-bottom:18px}
+.rodape ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.rodape ul a{color:rgba(246,244,248,.82);text-decoration:none;font-size:15px}
+.rodape ul a:hover{color:var(--neblina)}
+.sociais{display:flex;gap:10px}
+.sociais a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--borda);color:var(--neblina);transition:background .2s}
+.sociais a:hover{background:rgba(190,169,214,.12)}
+.rodape .base{margin-top:64px;padding-top:28px;border-top:1px solid rgba(190,169,214,.1);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13.5px;line-height:1.6;color:rgba(246,244,248,.5)}
+.rodape .base p{max-width:640px}
+
+/* responsivo */
+@media (max-width:1100px){
+.rodape .colunas{grid-template-columns:repeat(4,1fr)}
+.rodape .sobre{grid-column:1/-1}
+.flutua.f1{left:0}.flutua.f2{right:0}
+.nav a{padding:10px 10px;font-size:14.5px}
+}
+@media (max-width:980px){
+.nav,.topo .btn{display:none}
+.burger{display:flex}
+.hero{grid-template-columns:1fr;gap:40px;padding:28px 0 72px}
+.recurso,.recurso.inverte{grid-template-columns:1fr;gap:44px;padding:40px 0}
+.recurso.inverte .texto{order:0}
+.destaque,.cta-final{grid-template-columns:1fr;padding:48px 32px;gap:40px;border-radius:32px}
+.grade,.grade.quatro,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fatos{grid-template-columns:repeat(2,1fr)}
+.fatos div:nth-child(3){border-left:0}
+.fatos div:nth-child(n+3){border-top:1px solid var(--borda)}
+.post-destaque{grid-template-columns:1fr}
+.post-destaque .capa{min-height:240px}
+.post-destaque .corpo-post{padding:30px}
+.fundador{grid-template-columns:1fr;gap:36px}
+.fundador .retrato{max-width:420px;width:100%}
+.dados-empresa{grid-template-columns:1fr}
+.secao{padding:88px 0}
+.rodape .colunas{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+.wrap{padding:0 18px}
+.topo .wrap{height:64px}
+.secao{padding:68px 0}
+.secao.compacta{padding:48px 0}
+.grade,.grade.dois,.grade.quatro,.posts,.regras,.planos{grid-template-columns:1fr}
+.fatos{grid-template-columns:1fr}
+.fatos div{padding:18px 4px;border-left:0!important}
+.fatos div+div{border-top:1px solid var(--borda)}
+.card{padding:24px}
+.momento{min-height:0}
+.acoes .btn{width:100%}
+.flutua{display:none}
+.celular{width:268px}
+.palco-celular:before{width:360px}
+.destaque,.cta-final{padding:36px 22px;border-radius:28px}
+.linha-tempo{grid-template-columns:1fr;gap:22px;text-align:left;max-width:none}
+.linha-tempo:before{left:21px;right:auto;top:22px;bottom:22px;width:2px;height:auto;background:linear-gradient(180deg,var(--bruma),rgba(190,169,214,.25))}
+.linha-tempo div{display:grid;grid-template-columns:44px 1fr;column-gap:16px;text-align:left;padding:0}
+.linha-tempo .ponto{margin:0;grid-row:span 2}
+.plano{padding:28px}
+.plano .preco{font-size:38px}
+.rodape .colunas{grid-template-columns:1fr 1fr;gap:32px}
+form[data-lista] .linha{grid-template-columns:1fr}
+.artigo-capa{margin-bottom:-60px;border-radius:22px}
+.artigo-capa .capa{aspect-ratio:16/10}
+.artigo-capa .capa .icone-capa{width:20%}
+.artigo-corpo{padding:100px 0 64px}
+.texto-longo{font-size:17.5px}
+.chamada{padding:26px}
+.chamada .btn{width:100%}
+.numero-crise{padding:22px;gap:16px}
+.numero-crise .n{font-size:44px}
+.crise{padding:22px}
+.crise .btn{width:100%}
+.cabeca-secao{margin-bottom:36px}
+.respira{width:min(280px,100%)}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.revela{opacity:1;transform:none}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "O que é respirar em coerência e por que isso acalma corpo e mente", "description": "Um ritmo lento, de cerca de 5 a 6 respirações por minuto, que coloca coração e respiração no mesmo compasso.", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "inLanguage": "pt-BR", "mainEntityOfPage": "https://neurapse.com.br/blog/respirar-em-coerencia/", "image": "https://neurapse.com.br/og.png", "author": {"@type": "Organization", "name": "Time NEURAPSE"}, "publisher": {"@type": "Organization", "name": "Neurapse", "logo": {"@type": "ImageObject", "url": "https://neurapse.com.br/favicon.png"}}}</script></head>
+<body><div class="particulas" aria-hidden="true"><i style="left:0%;animation-duration:13s;animation-delay:0s"></i><i style="left:37%;animation-duration:20s;animation-delay:4s"></i><i style="left:74%;animation-duration:17s;animation-delay:8s"></i><i style="left:11%;animation-duration:14s;animation-delay:3s"></i><i style="left:48%;animation-duration:21s;animation-delay:7s"></i><i style="left:85%;animation-duration:18s;animation-delay:2s"></i><i style="left:22%;animation-duration:15s;animation-delay:6s"></i><i style="left:59%;animation-duration:22s;animation-delay:1s"></i><i style="left:96%;animation-duration:19s;animation-delay:5s"></i><i style="left:33%;animation-duration:16s;animation-delay:0s"></i><i style="left:70%;animation-duration:13s;animation-delay:4s"></i><i style="left:7%;animation-duration:20s;animation-delay:8s"></i><i style="left:44%;animation-duration:17s;animation-delay:3s"></i><i style="left:81%;animation-duration:14s;animation-delay:7s"></i></div><main><header class="topo solido" data-topo><div class="wrap">
+<a class="marca" href="/" aria-label="Neurapse, início"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg><span>Neurapse</span></a>
+<nav class="nav" aria-label="Principal"><a href="/como-funciona/">Como funciona</a><a href="/coerencia-consciente/">Coerência</a><a href="/seguranca/">Segurança</a><a href="/blog/" aria-current=page>Blog</a><a href="/sobre/">Sobre</a><a href="/planos/">Planos</a></nav>
+<a class="btn peq" href="/#lista">Lista de espera</a>
+<button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" data-abre-menu><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+</div></header>
+<div class="menu-movel" role="dialog" aria-modal="true" aria-label="Menu">
+<div class="linha-topo"><a class="marca" href="/"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg><span>Neurapse</span></a><button class="burger" type="button" aria-label="Fechar menu" data-fecha-menu style="margin-left:auto"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<nav><a href="/como-funciona/">Como funciona<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/coerencia-consciente/">Coerência<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/seguranca/">Segurança<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/blog/">Blog<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/sobre/">Sobre<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/planos/">Planos<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/ajuda-agora/">Ajuda agora<svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></nav>
+<a class="btn" href="/#lista" data-fecha-menu>Entrar na lista de espera</a>
+</div>
+<div class="wrap"><header class="artigo-topo">
+<nav class="trilha" aria-label="Você está em"><a href="/">Início</a><span>›</span><a href="/blog/">Blog</a><span>›</span><a href="/blog/?tema=respiracao">Respiração</a></nav>
+<h1>O que é respirar em coerência e por que isso acalma corpo e mente</h1><p class="lead">Um ritmo lento, de cerca de 5 a 6 respirações por minuto, que coloca coração e respiração no mesmo compasso.</p>
+<div class="autor"><span class="av"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></span><span><b>Time NEURAPSE</b>11 de novembro de 2026 · 6 min de leitura</span></div>
+</header>
+<div class="artigo-capa"><div class="capa respiracao" role="img" aria-label="O que é respirar em coerência e por que isso acalma corpo e mente"><span class="c1"></span><span class="c2"></span><span class="glow"></span><svg class="ic icone-capa" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.6 4.6A2 2 0 1 1 11 8H2m10.6 11.4A2 2 0 1 0 14 16H2m15.7-8.3A2.5 2.5 0 1 1 19.5 12H2"/></svg><span class="marca-capa"><svg viewBox="0 0 1500 1500" aria-hidden="true"><path fill="currentColor" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></span></div></div></div>
+<section class="clara artigo-corpo"><div class="wrap">
+<article class="texto-longo">
+<p>O seu coração não bate sempre no mesmo ritmo. Quando você puxa o ar, ele acelera um pouquinho. Quando solta, ele desacelera. Essa pequena variação é natural e saudável, e é a base do que se chama de respiração em coerência.</p>
+
+<h2>Coração e respiração no mesmo compasso</h2>
+<p>Quando respiramos de forma curta e rápida, como acontece nos dias corridos, essas ondas do coração ficam pequenas e bagunçadas. Quando a respiração fica lenta e regular, em torno de 5 a 6 respirações por minuto, as ondas do coração passam a acompanhar o ritmo da respiração e ficam maiores e mais organizadas.</p>
+<p>Esse estado tem sido bastante estudado em pesquisas sobre a variabilidade da frequência cardíaca, uma medida de como o corpo se adapta. Os estudos sugerem que praticar esse ritmo com regularidade pode ajudar a reduzir a sensação de estresse e a recuperar a calma depois de momentos tensos.</p>
+
+<h2>Como praticar</h2>
+<ol>
+<li>Sente-se confortável, com os pés no chão.</li>
+<li>Leve a atenção para o centro do peito. Se ajudar, apoie a mão ali.</li>
+<li>Puxe o ar pelo nariz, sem forçar, por cerca de 5 segundos.</li>
+<li>Solte o ar, também sem pressa, por cerca de 5 segundos.</li>
+<li>Continue nesse ritmo por 3 a 5 minutos.</li>
+</ol>
+<p>A respiração deve ser confortável. Se você sentir falta de ar, encurte um pouco os tempos. Com a prática, o ritmo lento vai ficando natural.</p>
+
+<h2>A Coerência Consciente</h2>
+<p>A Coerência Consciente é a prática assinatura do Neurapse, criada por Pietro Rodrigues, fundador do app. São 15 minutos com a respiração em 5,5 segundos para puxar o ar e 5,5 segundos para soltar, a atenção levada ao peito e uma música composta no mesmo ritmo da prática, com ondas que acompanham a sua respiração.</p>
+<p>Você não precisa contar nada. A voz e a música fazem o compasso, e você só acompanha.</p>
+
+<h2>Quando fazer</h2>
+<ul>
+<li>De manhã, antes de abrir as mensagens, para começar o dia com mais clareza.</li>
+<li>Depois de um momento tenso, para o corpo sair do modo de alerta.</li>
+<li>No fim do dia, para separar o trabalho do descanso.</li>
+</ul>
+
+<h2>Experimente agora</h2>
+<p>Na página da <a href="/coerencia-consciente/">Coerência Consciente</a> tem um guia de respiração animado. Um minuto já dá para sentir a diferença.</p>
+</article>
+<div class="chamada"><div><h3>Pratique com o Neurapse</h3><p>Respirações, meditações e uma IA que te acompanha, poucos minutos por dia. Entre na lista de espera.</p></div><a class="btn claro" href="/#lista">Entrar na lista</a></div>
+<div class="aviso-saude">Este texto é informativo e não substitui acompanhamento médico ou psicológico. Em sofrimento intenso, ligue 188 (CVV, grátis, 24 horas) ou 192 (SAMU). <a href="/ajuda-agora/">Ver como pedir ajuda</a>.</div>
+<div class="compartilhe"><span>Compartilhe:</span><a href="https://wa.me/?text=O%20que%20%C3%A9%20respirar%20em%20coer%C3%AAncia%20e%20por%20que%20isso%20acalma%20corpo%20e%20mente%20https%3A//neurapse.com.br/blog/respirar-em-coerencia/" target="_blank" rel="noopener"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c.4 2.2 2.3 4.2 4.5 4.8l1.2-1.2 2 1-.5 1.6c-3.8.3-7.4-3.3-7.1-7.1l1.6-.5 1 2z"/></svg> WhatsApp</a><button type="button" data-copia><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg> <span>Copiar link</span></button></div>
+<div style="margin:96px 0 0"><h2 class="titulo-m" style="margin-bottom:32px">Continue lendo</h2><div class="posts"><a class="post revela d0" href="/blog/respiracao-4-7-8/" data-cat="respiracao"><div class="capa respiracao" role="img" aria-label="Respiração 4-7-8: como fazer, quando usar e quais cuidados ter"><span class="c1"></span><span class="c2"></span><span class="glow"></span><svg class="ic icone-capa" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.6 4.6A2 2 0 1 1 11 8H2m10.6 11.4A2 2 0 1 0 14 16H2m15.7-8.3A2.5 2.5 0 1 1 19.5 12H2"/></svg><span class="marca-capa"><svg viewBox="0 0 1500 1500" aria-hidden="true"><path fill="currentColor" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></span></div>
+<div class="corpo-post"><span class="etiqueta">Respiração</span><h3>Respiração 4-7-8: como fazer, quando usar e quais cuidados ter</h3><p>Uma das respirações mais simples para desacelerar o corpo antes de dormir ou de um momento tenso. Passo a passo completo.</p><span class="meta-post">5 min de leitura</span></div></a><a class="post revela d1" href="/blog/quando-a-cabeca-nao-desliga/" data-cat="pensamentos"><div class="capa pensamentos" role="img" aria-label="Quando a cabeça não desliga: 5 jeitos de desacelerar os pensamentos"><span class="c1"></span><span class="c2"></span><span class="glow"></span><svg class="ic icone-capa" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span class="marca-capa"><svg viewBox="0 0 1500 1500" aria-hidden="true"><path fill="currentColor" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></span></div>
+<div class="corpo-post"><span class="etiqueta">Pensamentos acelerados</span><h3>Quando a cabeça não desliga: 5 jeitos de desacelerar os pensamentos</h3><p>Você deita, apaga a luz e a mente liga no máximo. Entenda por que isso acontece e o que fazer na hora.</p><span class="meta-post">6 min de leitura</span></div></a><a class="post revela d2" href="/blog/por-que-a-gente-deixa-tudo-pra-depois/" data-cat="tudo-pra-depois"><div class="capa tudo-pra-depois" role="img" aria-label="Por que a gente deixa tudo pra depois (e como dar o primeiro passo)"><span class="c1"></span><span class="c2"></span><span class="glow"></span><svg class="ic icone-capa" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="marca-capa"><svg viewBox="0 0 1500 1500" aria-hidden="true"><path fill="currentColor" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg></span></div>
+<div class="corpo-post"><span class="etiqueta">Tudo pra depois</span><h3>Por que a gente deixa tudo pra depois (e como dar o primeiro passo)</h3><p>Você sabe o que precisa fazer, mas não consegue começar. Não é preguiça. Entenda o que está por trás e como destravar.</p><span class="meta-post">6 min de leitura</span></div></a></div></div>
+</div></section></main><footer class="rodape"><div class="wrap">
+<div class="colunas">
+<div class="sobre"><a class="marca" href="/"><svg viewBox="0 0 1500 1500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BEA9D6"/><stop offset="1" stop-color="#F6F4F8"/></linearGradient></defs><path fill="url(#g)" d="M1412.03,982.86c-20.33,54.61-85.06,228.44-262.74,303.85-165.6,70.28-389.41,37.15-514.48-111.91-132.59-158.02-94.04-393.38-68.5-398.59,17.6-3.59,22.65,102.96,109.81,180.92,93.78,83.89,262.59,115.48,364.9,52.67,179.58-110.24,155.69-522.74-29.17-726.16-114.89-126.43-270.11-148.2-263.02-172.21,8.54-28.91,245.38-36.75,429.04,90.07,232.99,160.88,335.97,507.82,234.16,781.34ZM322.27,1302.59c182.84,124.35,418.33,114.01,426.55,85.15,6.8-23.87-146.56-43.89-260.53-167.29-185.84-201.21-209.51-615.46-29.17-726.16,102.32-62.81,271.12-31.21,364.9,52.68,87.15,77.96,92.21,184.51,109.81,180.92,25.54-5.21,64.09-240.56-68.5-398.58-125.07-149.06-348.88-182.19-514.48-111.91-177.68,75.41-242.41,249.25-262.74,303.85-101.74,273.31.02,622.11,234.16,781.34Z"/></svg><span>Neurapse</span></a>
+<p>Respirações, meditações e uma IA que acompanha você para viver com mais calma, foco e leveza, um dia de cada vez.</p>
+<div class="sociais"><a href="https://www.instagram.com/neurapse.app/" target="_blank" rel="noopener" aria-label="Instagram do Neurapse"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="mailto:apsis.digital@gmail.com" aria-label="E-mail"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></a></div></div>
+<div><h4>Produto</h4><ul><li><a href="/como-funciona/">Como funciona</a></li><li><a href="/coerencia-consciente/">Coerência Consciente</a></li><li><a href="/planos/">Planos</a></li><li><a href="/#lista">Lista de espera</a></li></ul></div>
+<div><h4>Conteúdo</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/?tema=pensamentos">Pensamentos acelerados</a></li><li><a href="/blog/?tema=respiracao">Respiração</a></li><li><a href="/blog/?tema=dias-dificeis">Dias difíceis</a></li></ul></div>
+<div><h4>Empresa</h4><ul><li><a href="/sobre/">Sobre</a></li><li><a href="/seguranca/">Segurança e IA</a></li><li><a href="https://www.instagram.com/neurapse.app/" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:apsis.digital@gmail.com">Contato</a></li></ul></div>
+<div><h4>Ajuda</h4><ul><li><a href="/ajuda-agora/">Ajuda agora</a></li><li><a href="/suporte.html">Suporte</a></li><li><a href="/termos.html">Termos de uso</a></li><li><a href="/privacidade.html">Privacidade</a></li></ul></div>
+</div>
+<div class="base"><p>O Neurapse apoia o seu bem-estar e não substitui acompanhamento médico ou psicológico. Em crise, ligue 188 (CVV, grátis, 24 horas) ou 192 (SAMU).</p>
+<p>© 2026 NEURAPSE TECNOLOGIA INOVA SIMPLES (I.S.)<br>CNPJ 70.083.538/0001-92 · Florianópolis, SC</p></div>
+</div></footer><script>
+(function(){
+var topo=document.querySelector('[data-topo]');
+function r(){if(topo)topo.classList.toggle('rolou',scrollY>12)}r();addEventListener('scroll',r,{passive:true});
+var b=document.body,ab=document.querySelector('[data-abre-menu]');
+function fecha(){b.classList.remove('menu-aberto');if(ab)ab.setAttribute('aria-expanded','false')}
+if(ab)ab.addEventListener('click',function(){b.classList.add('menu-aberto');ab.setAttribute('aria-expanded','true')});
+document.querySelectorAll('[data-fecha-menu]').forEach(function(x){x.addEventListener('click',fecha)});
+document.querySelectorAll('.menu-movel nav a').forEach(function(x){x.addEventListener('click',fecha)});
+addEventListener('keydown',function(e){if(e.key==='Escape')fecha()});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visivel');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.revela').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.revela').forEach(function(el){el.classList.add('visivel')})}
+})();
+</script><script>(function(){var b=document.querySelector('[data-copia]');if(b)b.addEventListener('click',function(){if(navigator.clipboard)navigator.clipboard.writeText(location.href).then(function(){b.querySelector('span').textContent='Link copiado'})})})();</script></body></html>
