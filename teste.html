@@ -45,7 +45,7 @@ footer .empresa{font-size:13px;color:rgba(246,244,248,.5)}
 .humor{height:42px;border-radius:14px;border:1px solid rgba(190,169,214,.25);background:rgba(58,48,111,.55);color:var(--neblina);font:500 13px Inter,sans-serif;cursor:pointer;padding:0}
 .humor[aria-pressed=true]{background:rgba(91,91,164,.75);border-color:var(--bruma)}
 .sugestao{border-radius:20px;padding:16px;background:rgba(58,48,111,.6);border:1px solid rgba(190,169,214,.2);display:flex;flex-direction:column;gap:8px;transition:opacity .4s}
-.sugestao small{color:var(--bruma);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.sugestao small{color:var(--bruma);font-size:12.5px}
 .sugestao strong{font-family:Manrope,sans-serif;font-size:16px}
 .sugestao p{margin:0;font-size:13.5px;line-height:1.5;color:rgba(246,244,248,.8)}
 .sugestao .tocar{align-self:flex-start;margin-top:4px;font:600 13px Manrope,sans-serif;background:var(--horizonte);border-radius:999px;padding:9px 16px}
@@ -129,7 +129,7 @@ section{padding:52px 0}
 .guia .sub{font-size:18px;line-height:1.6;color:rgba(246,244,248,.82);margin:18px 0 28px;max-width:640px}
 .dias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:8px 0 10px}
 .dia{padding:22px;border-radius:22px;background:rgba(58,48,111,.45);border:1px solid rgba(190,169,214,.16)}
-.dia b{display:block;font-family:Manrope,sans-serif;color:var(--bruma);font-size:13px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
+.dia b{display:block;font-family:Manrope,sans-serif;color:var(--bruma);font-size:15px;margin-bottom:8px}
 .dia h3{font-size:18px;margin-bottom:8px}
 .dia p{margin:0;color:rgba(246,244,248,.78);line-height:1.55;font-size:15px}
 .abas{display:inline-flex;padding:5px;border-radius:999px;background:rgba(58,48,111,.55);gap:4px;margin-bottom:18px}
@@ -150,19 +150,19 @@ section{padding:52px 0}
 <nav class="menu" aria-label="Principal"><a href="./#como-funciona">Como funciona</a><a href="./#ia">A IA</a><a href="./#planos">Planos</a><a href="./#duvidas">Dúvidas</a><a class="cta" href="./#lista">Lista de espera</a></nav>
 </div></header>
 <div class="wrap"><div class="guia">
-<div class="rotulo">Teste Neurapse · 7 dias</div>
+
 <h1>Obrigado por testar o Neurapse.</h1>
 <p class="sub">Durante 7 dias, use o app todos os dias, nem que seja por poucos minutos. No fim, você responde uma pesquisa rápida. A sua experiência vai moldar o app que chega às lojas.</p>
 <div class="acoes"><a class="btn" href="/app/">Abrir o app</a><a class="btn vazado" href="#instalar">Como instalar</a></div>
 
-<section style="padding-bottom:20px"><div class="rotulo">Como funciona</div><h2>Os seus 7 dias</h2>
+<section style="padding-bottom:20px"><h2>Os seus 7 dias</h2>
 <div class="dias" style="margin-top:26px">
 <div class="dia"><b>Dia 1</b><h3>Instale e crie a conta</h3><p>Coloque o Neurapse na tela de início, faça a entrada completa e a sua primeira prática.</p></div>
 <div class="dia"><b>Dias 2 a 6</b><h3>Pratique todo dia</h3><p>Abra pelo ícone, diga como você está e faça pelo menos uma prática. Converse com a IA quando quiser.</p></div>
 <div class="dia"><b>Dia 7</b><h3>Conte como foi</h3><p>O app mostra o botão da pesquisa. Leva uns 4 minutos e faz toda a diferença.</p></div>
 </div></section>
 
-<section id="instalar" style="padding-top:30px"><div class="rotulo">Passo a passo</div><h2>Instale o app no seu celular</h2>
+<section id="instalar" style="padding-top:30px"><h2>Instale o app no seu celular</h2>
 <div class="aviso" style="margin:22px 0">Instale primeiro e só depois crie a sua conta, já pelo ícone. No iPhone, o que você faz no Safari não passa para o ícone.</div>
 <div class="abas" role="tablist"><button role="tab" aria-selected="true" data-aba="iphone">iPhone</button><button role="tab" aria-selected="false" data-aba="android">Android</button></div>
 <ol class="passos" data-painel="iphone">
@@ -178,7 +178,7 @@ section{padding:52px 0}
 </ol>
 </section>
 
-<section style="padding-top:30px"><div class="rotulo">O que fazer no app</div><h2>Preencha tudo que o app pedir</h2>
+<section style="padding-top:30px"><h2>Preencha tudo que o app pedir</h2>
 <p class="intro">Cada resposta ajuda a gente a entender o que funciona. Use esta lista para acompanhar, ela fica salva neste celular.</p>
 <div class="checklist">
 <label><input type="checkbox" data-k="1"><span>Entrada completa<small>Nome, temas, rotina, meta, consentimento e lembrete.</small></span></label>
@@ -193,7 +193,7 @@ section{padding:52px 0}
 <label><input type="checkbox" data-k="10"><span>Pesquisa no 7º dia<small>O botão aparece na Início do app.</small></span></label>
 </div></section>
 
-<section style="padding-top:30px"><div class="rotulo">Bom saber</div><h2>Antes de começar</h2>
+<section style="padding-top:30px"><h2>Antes de começar</h2>
 <div class="grade dois" style="margin-top:26px">
 <div class="card"><h3>É uma versão de teste</h3><p>Algumas práticas aparecem como "Gravando" e chegam em breve. Se algo der errado, conte na pesquisa ou no grupo.</p></div>
 <div class="card"><h3>Lembretes</h3><p>Nesta versão os lembretes não chegam no celular. Escolha um horário fixo do seu dia para abrir o app.</p></div>
