@@ -169,9 +169,11 @@ section .intro{font-size:20px;max-width:780px}
 .btn.vazado{border-color:rgba(245,184,160,.55)!important}
 .hero h1{background:linear-gradient(100deg,#F6F4F8 30%,#F5B8A0 60%,#ED93B1 80%,#B095DA);-webkit-background-clip:text;background-clip:text;color:transparent}
 .faq details{border-left:3px solid var(--c,var(--lilas))}
-footer{background:rgba(14,10,40,.6)}
+footer{background:rgba(44,34,96,.5)}
+.topo{background:rgba(44,34,96,.55)!important}
 #aurora,#estrelas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none}
-#aurora{z-index:0}
+#aurora{z-index:0;background:#161133}
+html{background:#161133}
 #estrelas{z-index:1}
 .particulas{display:none}
 main,footer{position:relative;z-index:2}
@@ -238,7 +240,7 @@ var leve=innerWidth<820;
 /* 1 e 2: aurora em movimento que respira */
 (function(){
   var c=document.getElementById('aurora'),gl=c.getContext('webgl');
-  if(!gl){c.style.background='linear-gradient(180deg,#161133,#2A2160 45%,#161133)';return}
+  if(!gl){c.style.display='none';return}
   var esc=leve?0.5:0.75;
   function tam(){c.width=Math.round(innerWidth*esc);c.height=Math.round(innerHeight*esc);gl.viewport(0,0,c.width,c.height)}
   tam();addEventListener('resize',tam);
@@ -256,8 +258,8 @@ var leve=innerWidth<820;
   ' float faixa=exp(-pow((uv.y-y)*(4.5-fk*1.),2.));',
   ' float cortina=fbm(vec2(p.x*3.+fk*7.,uv.y*1.5-t*.08));',
   ' vec3 c1=fk<.5?vec3(.541,.435,.753):(fk<1.5?vec3(.780,.490,.710):vec3(.929,.576,.694));',
-  ' cor+=c1*faixa*(.25+.95*cortina*cortina*1.6)*.5*resp;}',
-  'float hor=exp(-pow((uv.y-.05)*3.,2.));cor+=vec3(.961,.722,.627)*hor*.22*resp;',
+  ' cor+=c1*faixa*(.25+.95*cortina*cortina*1.6)*.38*resp;}',
+  'float hor=exp(-pow((uv.y-.05)*3.,2.));cor+=vec3(.961,.722,.627)*hor*.16*resp;',
   'cor*=1.-.35*smoothstep(.55,0.,uv.x)*smoothstep(.2,.6,uv.y);gl_FragColor=vec4(cor,1.);}'].join('\n');
   function sh(tipo,src){var s=gl.createShader(tipo);gl.shaderSource(s,src);gl.compileShader(s);return s}
   var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
